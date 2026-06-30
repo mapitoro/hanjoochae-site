@@ -118,9 +118,9 @@ const keywords = profile.keywords.map((k) => `<span class="chip">${esc(k)}</span
 const wordmarks = (arr) => arr.map((x) => `<span class="wm">${esc(x)}</span>`).join("");
 const proofBand = `
   <div class="proof">
-    <div class="proof-group"><span class="proof-k">Partnered with</span>${wordmarks(proof.partners)}</div>
-    <div class="proof-group"><span class="proof-k">Spoke at</span>${wordmarks(proof.spokeAt)}</div>
-    <div class="proof-group"><span class="proof-k">Featured in</span>${wordmarks(proof.featuredIn)}</div>
+    <div class="proof-group"><span class="proof-k">Partnered with</span><div class="wm-list">${wordmarks(proof.partners)}</div></div>
+    <div class="proof-group"><span class="proof-k">Spoke at</span><div class="wm-list">${wordmarks(proof.spokeAt)}</div></div>
+    <div class="proof-group"><span class="proof-k">Featured in</span><div class="wm-list">${wordmarks(proof.featuredIn)}</div></div>
   </div>`;
 
 // ---------- education ----------
@@ -311,9 +311,10 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);bac
 .hero-portrait .media{max-width:340px;margin-left:auto}
 
 /* proof band */
-.proof{display:flex;flex-direction:column;gap:14px}
-.proof-group{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
-.proof-k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);min-width:118px}
+.proof{display:flex;flex-direction:column;gap:16px}
+.proof-group{display:grid;grid-template-columns:118px 1fr;align-items:start;gap:14px}
+.proof-k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:8px}
+.wm-list{display:flex;flex-wrap:wrap;gap:8px;min-width:0}
 .wm{font-family:"Newsreader",serif;font-size:16px;font-weight:600;color:var(--ink);background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:5px 12px}
 
 /* about */
@@ -463,6 +464,8 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
   .fgallery figcaption{font-size:11.5px}
   .fmetric-v{font-size:22px}
   .patent{grid-template-columns:1fr;gap:2px}.patent-year{text-align:left}
+  .proof-group{grid-template-columns:1fr;gap:6px}
+  .proof-k{padding-top:0}
   .contact-card{padding:28px 22px}
   .contact-card .big{font-size:21px;word-break:break-word}
   .news-item{gap:14px}
