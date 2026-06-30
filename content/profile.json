@@ -1,0 +1,36 @@
+{
+  "name": "Han Joo Chae",
+  "nameKo": "채한주",
+  "title": "CTO & Head of Global Business",
+  "company": "Oncosoft",
+  "tagline": "Medical AI leader bridging R&D and global commercialization.",
+  "pov": "Medical AI only earns its place when it clears the regulators and reaches patients at global scale. I build the teams, products, and go-to-market that get it there.",
+  "photo": "assets/img/profile.jpg",
+  "speakingPhoto": "assets/img/speaking.jpg",
+  "speakingVideo": "",
+  "summary": "Medical AI leader with deep expertise bridging R&D with global commercialization across startups and enterprises. I build and scale AI organizations from zero, lead cross-functional teams across Korea and the US, and take products from rapid prototyping to regulated global launch (FDA/CE) — securing $1B+ in contracts and expanding across the US, Asia, the Middle East, and Latin America through partnerships with Google Cloud and AWS.",
+  "location": "Seoul, Korea",
+  "email": "hanjoo.chae@gmail.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/hanjoochae",
+    "scholar": "https://scholar.google.com/citations?hl=en&user=GM3F4jsAAAAJ",
+    "website": "https://hanjoochae.com"
+  },
+  "highlights": [
+    { "value": "$1B+", "label": "Long-term contracts secured" },
+    { "value": "FDA / CE", "label": "Regulatory clearances achieved" },
+    { "value": "25%", "label": "Domestic market share (Oncosoft)" },
+    { "value": "15+", "label": "Granted US patents" }
+  ],
+  "keywords": [
+    "Medical AI",
+    "Human-AI Interaction",
+    "Human-Computer Interaction",
+    "Computer Vision",
+    "Machine Learning",
+    "Augmented / Mixed Reality",
+    "Global Go-to-Market",
+    "Regulatory (FDA/CE/MFDS)",
+    "MLOps"
+  ]
+}

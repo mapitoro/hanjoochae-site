@@ -1,0 +1,83 @@
+[
+  {
+    "authors": "Seunghwan Lee, Gwanmo Park, Hyewon Son, Jiwon Ryu, and Han Joo Chae",
+    "year": 2024,
+    "title": "InFusionSurf: Refining Neural RGB-D Surface Reconstruction Using Per-Frame Intrinsic Refinement and TSDF Fusion Prior Learning",
+    "venue": "IEEE International Conference on Multimedia and Expo (ICME '24)",
+    "type": "Conference",
+    "link": "https://doi.org/10.1109/ICME57554.2024.10687901",
+    "projectPage": "https://rokit-healthcare.github.io/InFusionSurf/"
+  },
+  {
+    "authors": "Han Joo Chae, Ji-Been Kim, Gwanmo Park, David M. O'Sullivan, Jinwook Seo, and Jung-Jun Park",
+    "year": 2023,
+    "title": "An Artificial Intelligence Exercise Coaching Mobile App: Development and Randomized Controlled Trial to Verify Its Effectiveness in Posture Correction",
+    "venue": "Interactive Journal of Medical Research (IJMR '23)",
+    "type": "Journal",
+    "link": "https://doi.org/10.2196/37604"
+  },
+  {
+    "authors": "Han Joo Chae, Seunghwan Lee, Hyewon Son, Seungyeob Han, and Taebin Lim",
+    "year": 2022,
+    "title": "Generating 3D Bio-Printable Patches Using Wound Segmentation and Reconstruction to Treat Diabetic Foot Ulcers",
+    "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR '22)",
+    "type": "Conference",
+    "link": "https://doi.org/10.1109/CVPR52688.2022.00257"
+  },
+  {
+    "authors": "Han Joo Chae, Youli Chang, Minji Kim, Gwanmo Park, and Jinwook Seo",
+    "year": 2020,
+    "title": "ARphy: Managing Photo Collections Using Physical Objects in AR",
+    "venue": "Extended Abstracts of the 2020 CHI Conference on Human Factors in Computing Systems (CHI EA '20)",
+    "type": "Conference",
+    "link": "https://doi.org/10.1145/3334480.3382885"
+  },
+  {
+    "authors": "Han Joo Chae, Youli Chang, Minji Kim, Gwanmo Park, and Jinwook Seo",
+    "year": 2020,
+    "title": "Leveraging the Physical Properties of Real Objects to Manage Digital Photography in Augmented Reality",
+    "venue": "Journal of Korean Institute of Information Scientists and Engineers (JOK '20)",
+    "type": "Journal",
+    "link": "https://doi.org/10.5626/JOK.2020.47.10.900"
+  },
+  {
+    "authors": "Han Joo Chae, Jeong-in Hwang, Yieun Kim, Kyle Koh, and Jinwook Seo",
+    "year": 2020,
+    "title": "SCARII: A Study to Advise Safety Concerns Caused by Involuntary Inputs in Augmented Reality",
+    "venue": "Journal of Korean Institute of Next Generation Computing",
+    "type": "Journal",
+    "link": "https://doi.org/10.23019/kingpc.16.2.202004.002"
+  },
+  {
+    "authors": "Sarah Faltaous, Gabriel Haas, Liliana Barrios, Andreas Seiderer, Sebastian Felix Rauh, Han Joo Chae, Stefan Schneegass, and Florian Alt",
+    "year": 2019,
+    "title": "BrainShare: A Glimpse of Social Interaction for Locked-in Syndrome Patients",
+    "venue": "Extended Abstracts of the 2019 CHI Conference on Human Factors in Computing Systems (CHI EA '19)",
+    "type": "Conference",
+    "link": "https://doi.org/10.1145/3290607.3312754"
+  },
+  {
+    "authors": "Han Joo Chae, Jeong-in Hwang, and Jinwook Seo",
+    "year": 2018,
+    "title": "Wall-based Space Manipulation Technique for Efficient Placement of Distant Objects in Augmented Reality",
+    "venue": "31st Annual ACM Symposium on User Interface Software and Technology (UIST '18)",
+    "type": "Conference",
+    "link": "https://doi.org/10.1145/3242587.3242631"
+  },
+  {
+    "authors": "Han Joo Chae, Jeong-in Hwang, Yuri Choi, Yieun Kim, Kyle Koh, and Jinwook Seo",
+    "year": 2016,
+    "title": "Prevention of Unintentional Input While Using Wrist Rotation for Device Configuration",
+    "venue": "29th Annual Symposium on User Interface Software and Technology (UIST '16 Adjunct)",
+    "type": "Conference",
+    "link": "https://doi.org/10.1145/2984751.2984771"
+  },
+  {
+    "authors": "Heonjin Park, Kyle Koh, Yuri Choi, Han Joo Chae, Jeongin Hwang, and Jinwook Seo",
+    "year": 2016,
+    "title": "Defining Rules Among Devices in Smart Environment Using an Augmented Reality Headset",
+    "venue": "Second International Conference on IoT in Urban Space (Urb-IoT '16)",
+    "type": "Conference",
+    "link": "https://doi.org/10.1145/2962735.2962746"
+  }
+]

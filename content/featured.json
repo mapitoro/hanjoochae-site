@@ -1,0 +1,99 @@
+[
+  {
+    "id": "oncosoft",
+    "label": "Now · Current Role",
+    "current": true,
+    "title": "Bringing AI to Radiation Oncology",
+    "org": "Oncosoft",
+    "role": "CTO & Head of Global Business",
+    "years": "2024–present",
+    "heroImage": "assets/img/oncosoft-pipeline.jpg",
+    "heroFit": "contain",
+    "heroVideo": "",
+    "video": "",
+    "demoVideo": "assets/img/oncosoft-viewer.mp4",
+    "demoCaption": "OncoStudio — AI auto-contouring of organs and tumors on CT/MR",
+    "lead": "As CTO and Head of Global Business, I lead the technology and global expansion of Oncosoft — an end-to-end AI software ecosystem bringing precision and efficiency to radiation oncology.",
+    "blocks": [
+      {
+        "label": "Problem",
+        "text": "Radiation therapy planning depends on manual organ and tumor contouring on CT/MR — slow, variable between clinicians, and a bottleneck to treating more patients."
+      },
+      {
+        "label": "Approach",
+        "text": "OncoStudio auto-contours organs-at-risk and tumors in about a minute through a zero-click workflow integrated with PACS, TPS, and EMR. It anchors a full platform — OncoFlow, OncoStudio, OncoPlan, and OncoRPT — spanning imaging, planning, delivery, and follow-up."
+      },
+      {
+        "label": "Impact",
+        "text": "Captured 25% domestic market share and ranked #1 in clinical performance benchmarks by leading Japanese research institutions, with 300,000+ patient cases processed. I lead R&D and global expansion across the US, Latin America, Southeast Asia, and the Middle East."
+      }
+    ],
+    "metrics": [
+      { "value": "25%", "label": "Domestic market share" },
+      { "value": "#1", "label": "Japan clinical benchmark" },
+      { "value": "300K+", "label": "Patient cases processed" },
+      { "value": "~1 min", "label": "Organ auto-contouring" }
+    ],
+    "certifications": [
+      { "region": "Korea (MFDS)", "date": "2022.02" },
+      { "region": "US (FDA)", "date": "2025.02" },
+      { "region": "Japan", "date": "2025.04" },
+      { "region": "Singapore", "date": "2025.10" },
+      { "region": "Brazil", "date": "2025.12" }
+    ],
+    "gallery": [
+      { "image": "assets/img/oncosoft-booth.jpg", "caption": "Meeting clinicians and partners at a global oncology conference" },
+      { "image": "assets/img/aapm-award.jpg", "caption": "Receiving the International Symposium Award — 5th KSMP-JSMP-KAMPiNA Joint Symposium at AAPM, 2025" },
+      { "image": "assets/img/oncosoft-group.jpg", "caption": "With the Oncosoft team on-site" }
+    ],
+    "partners": [],
+    "links": [
+      { "label": "Oncosoft", "url": "https://oncosoft.io" }
+    ]
+  },
+  {
+    "id": "rokit",
+    "label": "Flagship Career Impact · 2020–2023",
+    "current": false,
+    "title": "AI Cloud Platform for 3D-Bioprinted Wound Regeneration",
+    "org": "ROKIT Healthcare",
+    "role": "CAIO & Vice President",
+    "years": "2020–2023",
+    "heroImage": "assets/img/rokit-hero.jpg",
+    "heroVideo": "",
+    "video": "https://www.youtube.com/watch?v=BlcT63kwh6o",
+    "videoCaption": "Technology overview — CVPR 2022 (wound segmentation & 3D reconstruction)",
+    "lead": "An AI platform that turns a single tablet photo of a wound into a ready-to-print 3D patch model in seconds — then bio-prints it at the point of care to treat diabetic foot ulcers, deployed across the US, Asia, the Middle East, and Latin America.",
+    "blocks": [
+      {
+        "label": "Problem",
+        "text": "Personalized regenerative patches require precise scanning, CAD modeling, and bioprinting — work that a surgical team anywhere in the world cannot realistically do at the point of care. To reach patients globally, the hard part had to disappear into software."
+      },
+      {
+        "label": "Approach",
+        "text": "We built an AI platform (AiD Regen) that, from a single tablet RGB-D photo, segments the wound, reconstructs its 3D surface, and generates a ready-to-print 3D model in about 30 seconds. Production-grade MLOps on Google Cloud (Vertex AI, GKE) delivers identical quality at any clinical site — no on-site AI specialist required."
+      },
+      {
+        "label": "Impact",
+        "text": "Founded and scaled the AI department from zero to 15, achieved both FDA and CE clearance, and drove the full commercial cycle from MVP to $1B+ in long-term contracts across the US, India, Turkey, the Middle East, and Latin America. Launched on AWS in 6 months, then migrated to Google Cloud in 3 — the work became a featured Google Cloud customer story."
+      }
+    ],
+    "metrics": [
+      { "value": "$1B+", "label": "Long-term contracts" },
+      { "value": "FDA + CE", "label": "Regulatory clearance" },
+      { "value": "0→15", "label": "AI team built" },
+      { "value": "~30 sec", "label": "Photo → printable 3D model" }
+    ],
+    "gallery": [
+      { "image": "assets/img/rokit-modeling.jpg", "caption": "Wound capture → AI segmentation & 3D reconstruction" },
+      { "image": "assets/img/rokit-patch.jpg", "caption": "Personalized 3D-bioprinted regeneration patch" },
+      { "image": "assets/img/rokit-application.jpg", "caption": "Point-of-care application in the operating room" }
+    ],
+    "partners": ["Google Cloud", "AWS"],
+    "links": [
+      { "label": "Google Cloud customer story", "url": "https://cloud.google.com/customers/rokithealthcare?hl=ko" },
+      { "label": "Interview — Chosun Biz", "url": "https://biz.chosun.com/science-chosun/bio/2022/10/30/FAFBDKQ2HRGR7CEZK2YZVURY4U/" },
+      { "label": "Paper — CVPR 2022", "url": "https://doi.org/10.1109/CVPR52688.2022.00257" }
+    ]
+  }
+]

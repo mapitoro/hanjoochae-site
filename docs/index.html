@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Han Joo Chae — CTO &amp; Head of Global Business, Oncosoft</title>
+<meta name="description" content="Medical AI leader with deep expertise bridging R&amp;D with global commercialization across startups and enterprises. I build and scale AI organizations from z" />
+<meta name="author" content="Han Joo Chae" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Han Joo Chae — CTO &amp; Head of Global Business" />
+<meta property="og:description" content="Medical AI leader bridging R&amp;D and global commercialization." />
+<meta property="og:url" content="https://hanjoochae.com" />
+<meta name="twitter:card" content="summary" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Noto+Serif+KR:wght@500;600&display=swap" rel="stylesheet" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Han Joo Chae","jobTitle":"CTO & Head of Global Business","worksFor":{"@type":"Organization","name":"Oncosoft"},"email":"mailto:hanjoo.chae@gmail.com","url":"https://hanjoochae.com","sameAs":["https://www.linkedin.com/in/hanjoochae","https://scholar.google.com/citations?hl=en&user=GM3F4jsAAAAJ"],"description":"Medical AI leader with deep expertise bridging R&D with global commercialization across startups and enterprises. I build and scale AI organizations from zero, lead cross-functional teams across Korea and the US, and take products from rapid prototyping to regulated global launch (FDA/CE) — securing $1B+ in contracts and expanding across the US, Asia, the Middle East, and Latin America through partnerships with Google Cloud and AWS."}</script>
+<style>
+:root{
+  --ink:#0b1623; --ink-2:#33445a; --muted:#64748b; --line:#e6eaf0;
+  --bg:#ffffff; --bg-soft:#f6f8fb; --accent:#0e7490; --accent-deep:#0b5566;
+  --max:1080px; --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 28px;font-weight:600}
+h3{margin:0;font-size:18px;font-weight:600;color:var(--ink)}
+p{color:var(--ink-2);margin:0 0 14px}
+
+/* media slots */
+.media{position:relative;overflow:hidden;border-radius:var(--radius);background:var(--bg-soft);border:1px solid var(--line)}
+.media img,.media iframe,.media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
+.media.fit-contain{aspect-ratio:auto;background:#fff;display:block;padding:12px 24px}
+.media.fit-contain img{position:static;width:100%;height:auto;display:block;object-fit:contain}
+.media.is-video video{background:#000}
+.m-wide{aspect-ratio:16/9}
+.m-card{aspect-ratio:16/10}
+.m-tile{aspect-ratio:4/3}
+.m-portrait{aspect-ratio:4/5}
+.is-ph .ph-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  background:linear-gradient(135deg,#eef4f7,#e2ecf0 60%,#dce8ee);color:var(--accent-deep)}
+.ph-mark{font-size:26px;opacity:.5}
+.ph-label{font-size:12.5px;color:var(--accent-deep);opacity:.8;max-width:80%;text-align:center;letter-spacing:.01em}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-weight:600}
+.nav-links{display:flex;gap:20px}
+.nav-links a{color:var(--ink-2);font-size:14px;font-weight:500}
+.nav-links a:hover{color:var(--accent);text-decoration:none}
+
+/* hero */
+.hero{padding:84px 0 56px;border-top:none}
+.hero-grid{display:grid;grid-template-columns:1.5fr .9fr;gap:48px;align-items:center}
+.eyebrow{color:var(--accent);font-weight:600;font-size:14px;letter-spacing:.04em;margin-bottom:16px}
+.hero h1{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:clamp(38px,6vw,60px);line-height:1.05;letter-spacing:-.01em;margin:0 0 6px;color:var(--ink)}
+.name-ko{font-family:"Noto Serif KR",serif;font-weight:500;font-size:clamp(17px,2vw,21px);color:var(--muted);letter-spacing:.04em;margin:0 0 18px}
+.hero .pov{font-size:clamp(18px,2.3vw,21px);color:var(--ink-2);max-width:620px;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:38px}
+.btn{display:inline-flex;align-items:center;padding:10px 18px;border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:500;color:var(--ink);background:#fff;transition:.15s}
+.btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-deep);border-color:var(--accent-deep);color:#fff}
+.btn-sm{padding:7px 13px;font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stat{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px}
+.stat-value{font-family:"Newsreader",serif;font-size:26px;font-weight:600;color:var(--accent-deep);line-height:1}
+.stat-label{font-size:12.5px;color:var(--muted);margin-top:7px}
+.hero-portrait .media{max-width:340px;margin-left:auto}
+
+/* proof band */
+.proof{display:flex;flex-direction:column;gap:14px}
+.proof-group{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.proof-k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);min-width:118px}
+.wm{font-family:"Newsreader",serif;font-size:16px;font-weight:600;color:var(--ink);background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:5px 12px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.about-lead{font-size:18px;color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{font-size:13px;background:var(--bg-soft);border:1px solid var(--line);color:var(--ink-2);padding:6px 12px;border-radius:999px}
+.side-label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;font-weight:600}
+.edu-item{padding:14px 0;border-bottom:1px solid var(--line)}
+.edu-item:last-child{border-bottom:none}
+.edu-school{font-weight:600}
+.edu-degree{font-size:14px;color:var(--ink-2)}
+.edu-detail{font-size:13px;color:var(--muted)}
+.edu-years{font-size:13px;color:var(--muted);margin-top:2px}
+
+/* featured impact */
+#impact{background:var(--bg-soft)}
+.f-label{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.f-title{font-family:"Newsreader",serif;font-size:clamp(24px,3.4vw,34px);font-weight:600;margin:10px 0 6px;line-height:1.12}
+.f-org{font-size:14px;color:var(--accent-deep);font-weight:500}
+.f-lead{font-size:19px;color:var(--ink-2);max-width:760px;margin:16px 0 28px}
+.fmetrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:26px 0}
+.fmetric{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px}
+.fmetric-v{font-family:"Newsreader",serif;font-size:25px;font-weight:600;color:var(--accent-deep);line-height:1}
+.fmetric-l{font-size:12.5px;color:var(--muted);margin-top:7px}
+.fblocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin:8px 0 30px}
+.fblock-k{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.fblock p{font-size:14.5px}
+.fgallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-bottom:26px}
+.fgallery figure{margin:0}
+.fgallery figcaption{font-size:12.5px;color:var(--muted);margin-top:8px}
+.f-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+.f-partners{display:flex;gap:8px;flex-wrap:wrap}
+.f-links{display:flex;gap:10px;flex-wrap:wrap}
+.case + .case{margin-top:50px;padding-top:46px;border-top:1px solid var(--line)}
+.case-current .f-label{color:#0a7d52}
+.case-video{margin:6px 0 30px}
+.certs{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:0 0 26px}
+.certs-k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cert-chips{display:flex;flex-wrap:wrap;gap:8px}
+.cert{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+.cert b{font-family:"Newsreader",serif;color:var(--accent-deep);font-weight:600}
+
+/* ventures */
+.vcard-h{display:grid;grid-template-columns:minmax(240px,.8fr) 1.2fr;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-bottom:20px}
+.vcard-h .media{border:0;border-radius:0;aspect-ratio:auto;min-height:230px}
+.vcard-body{padding:26px;display:flex;flex-direction:column;justify-content:center}
+.vcard-cat{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent)}
+.vcard-h h3{margin:9px 0 4px;font-size:19px}
+.vcard-meta{font-size:13px;color:var(--muted);margin-bottom:10px}
+.vcard-body p{font-size:14.5px;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11px;background:var(--bg-soft);border:1px solid var(--line);color:var(--ink-2);padding:4px 9px;border-radius:6px}
+.roots{margin-top:26px;border-top:1px dashed var(--line);padding-top:22px}
+.root-item{display:grid;grid-template-columns:.8fr 1.6fr;gap:24px;align-items:start}
+.root-meta{font-size:13px;color:var(--muted);margin-top:3px}
+.root-item p{font-size:14px}
+
+/* experience */
+.exp-item{padding:22px 0 22px 22px;border-left:2px solid var(--line);position:relative}
+.exp-item::before{content:"";position:absolute;left:-7px;top:28px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--line)}
+.exp-item.current::before{background:var(--accent);border-color:var(--accent)}
+.exp-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.exp-dates{font-size:13px;color:var(--muted);white-space:nowrap}
+.exp-org{font-size:14px;color:var(--accent-deep);font-weight:500;margin:2px 0 6px}
+.exp-org span{color:var(--muted);font-weight:400}
+.exp-item ul{margin:8px 0 0;padding-left:18px}
+.exp-item li{color:var(--ink-2);margin-bottom:6px}
+
+/* speaking */
+.speak-media{max-width:760px;margin:0 0 8px}
+.col-list{list-style:none;margin:0;padding:0}
+.col-list.cols{column-count:2;column-gap:46px}
+.col-list.cols li{break-inside:avoid;-webkit-column-break-inside:avoid}
+.col-list li{display:flex;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink-2)}
+.li-date{color:var(--muted);min-width:74px;white-space:nowrap;font-size:13px}
+.col-list em{color:var(--muted);font-style:normal}
+.speak-sub{margin:30px 0 14px}
+
+/* writing */
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.post{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column}
+.post-date{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.post h3{font-size:17px;margin-bottom:8px}
+.post p{font-size:14px}
+.post-link{margin-top:auto;font-weight:600;font-size:14px}
+.post-soon{margin-top:auto;font-size:13px;color:var(--muted)}
+
+/* research */
+.pub-list,.patent-list{list-style:none;margin:0;padding:0}
+.pub{display:flex;gap:18px;padding:15px 0;border-bottom:1px solid var(--line)}
+.pub-year{font-family:"Newsreader",serif;font-size:16px;color:var(--accent-deep);min-width:46px;font-weight:600}
+.pub-title{font-weight:600;color:var(--ink);font-size:15px}
+.pub-authors{font-size:13px;color:var(--muted);margin:2px 0}
+.pub-venue{font-size:13px;color:var(--ink-2)}
+.pub-type{font-size:11px;color:var(--accent);border:1px solid var(--line);border-radius:5px;padding:1px 7px;margin-left:6px}
+.pub-extra{font-size:12px;font-weight:500;margin-left:8px;white-space:nowrap}
+.note-link{margin-top:18px;font-size:14px}
+.patents-wrap{margin-top:36px}
+.patent{display:grid;grid-template-columns:130px 1fr 56px;gap:14px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.patent-id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent-deep);font-size:12.5px}
+.patent-title{color:var(--ink-2)}
+.patent-year{color:var(--muted);text-align:right}
+
+/* awards / news / press */
+.award{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);list-style:none}
+.award:last-child{border-bottom:none}
+.award-year{font-family:"Newsreader",serif;font-weight:600;color:var(--accent-deep);min-width:46px}
+.award-title{font-weight:600;font-size:14.5px}
+.award-detail{font-size:13.5px;color:var(--muted)}
+.news-item{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.news-date{font-size:13px;color:var(--muted);min-width:84px;padding-top:2px}
+.news-body h3{font-size:16px}
+.news-body p{font-size:14px;margin:4px 0 0}
+.press-list{list-style:none;margin:0;padding:0}
+.press-item{padding:14px 0;border-bottom:1px solid var(--line)}
+.press-item>a{font-weight:600}
+.press-meta{font-size:13px;color:var(--muted);margin-top:2px}
+.press-note{font-size:13px;color:var(--ink-2);margin-top:4px}
+
+/* contact / footer */
+.contact-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:40px;text-align:center}
+.contact-card h2{margin-bottom:10px}
+.contact-card .big{font-family:"Newsreader",serif;font-size:26px;font-weight:600;color:var(--ink);margin-bottom:20px}
+footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border-top:1px solid var(--line)}
+
+@media (max-width:860px){
+  .hero{padding:56px 0 44px}
+  .hero-grid,.about-grid{grid-template-columns:1fr;gap:28px}
+  .hero-portrait{order:-1}.hero-portrait .media{max-width:240px;margin:0}
+  .fblocks{grid-template-columns:1fr}
+  .fgallery{grid-template-columns:1fr 1fr;gap:14px}
+  .col-list.cols{column-count:1}
+  .vcard-h{grid-template-columns:1fr}
+  .vcard-h .media{aspect-ratio:16/10;min-height:0}
+  .fmetrics,.stats{grid-template-columns:repeat(2,1fr)}
+  .root-item{grid-template-columns:1fr;gap:6px}
+  .nav-links{display:none}
+}
+@media (max-width:560px){
+  .hero{padding:40px 0 32px}
+  section{padding:52px 0}
+  .wrap{padding:0 18px}
+  .f-lead{font-size:17px}
+  .f-title{font-size:24px}
+  .fgallery{gap:10px}
+  .fgallery figcaption{font-size:11.5px}
+  .fmetric-v{font-size:22px}
+  .patent{grid-template-columns:1fr;gap:2px}.patent-year{text-align:left}
+  .contact-card{padding:28px 22px}
+  .contact-card .big{font-size:21px;word-break:break-word}
+  .news-item{gap:14px}
+  .award-year,.pub-year{min-width:40px}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">Han Joo Chae</a>
+    <nav class="nav-links"><a href="#about">About</a><a href="#impact">Impact</a><a href="#ventures">Ventures</a><a href="#experience">Experience</a><a href="#speaking">Speaking</a><a href="#research">Research</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">CTO &amp; Head of Global Business · Oncosoft</div>
+      <h1>Han Joo Chae</h1>
+      <div class="name-ko">채한주</div>
+      <p class="pov">Medical AI only earns its place when it clears the regulators and reaches patients at global scale. I build the teams, products, and go-to-market that get it there.</p>
+      <div class="btns">
+  
+  <a class="btn btn-primary" href="https://www.linkedin.com/in/hanjoochae" target="_blank" rel="noopener">LinkedIn</a>
+  <a class="btn" href="https://scholar.google.com/citations?hl=en&amp;user=GM3F4jsAAAAJ" target="_blank" rel="noopener">Scholar</a>
+  <a class="btn" href="mailto:hanjoo.chae@gmail.com">Email</a></div>
+      <div class="stats"><div class="stat"><div class="stat-value">$1B+</div><div class="stat-label">Long-term contracts secured</div></div><div class="stat"><div class="stat-value">FDA / CE</div><div class="stat-label">Regulatory clearances achieved</div></div><div class="stat"><div class="stat-value">25%</div><div class="stat-label">Domestic market share (Oncosoft)</div></div><div class="stat"><div class="stat-value">15+</div><div class="stat-label">Granted US patents</div></div></div>
+    </div>
+    <div class="hero-portrait"><div class="media m-portrait"><img src="assets/img/profile.jpg" alt="Professional portrait" loading="lazy" /></div></div>
+  </div>
+</section>
+
+<section id="proof" style="padding:36px 0">
+  <div class="wrap">
+  <div class="proof">
+    <div class="proof-group"><span class="proof-k">Partnered with</span><span class="wm">Google Cloud</span><span class="wm">AWS</span></div>
+    <div class="proof-group"><span class="proof-k">Spoke at</span><span class="wm">AAPM Int'l Symposium</span><span class="wm">Google Cloud Startup Summit</span><span class="wm">AWS Public Sector Summit</span><span class="wm">Naver</span><span class="wm">Samsung SSDC</span><span class="wm">KAIST</span></div>
+    <div class="proof-group"><span class="proof-k">Featured in</span><span class="wm">Google Cloud Customers</span><span class="wm">Chosun Biz</span></div>
+  </div></div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <div class="about-grid">
+      <div><p class="about-lead">Medical AI leader with deep expertise bridging R&amp;D with global commercialization across startups and enterprises. I build and scale AI organizations from zero, lead cross-functional teams across Korea and the US, and take products from rapid prototyping to regulated global launch (FDA/CE) — securing $1B+ in contracts and expanding across the US, Asia, the Middle East, and Latin America through partnerships with Google Cloud and AWS.</p><div class="chips"><span class="chip">Medical AI</span><span class="chip">Human-AI Interaction</span><span class="chip">Human-Computer Interaction</span><span class="chip">Computer Vision</span><span class="chip">Machine Learning</span><span class="chip">Augmented / Mixed Reality</span><span class="chip">Global Go-to-Market</span><span class="chip">Regulatory (FDA/CE/MFDS)</span><span class="chip">MLOps</span></div></div>
+      <div><div class="side-label">Education</div><div class="edu-item">
+      <div class="edu-school">Seoul National University</div>
+      <div class="edu-degree">Ph.D., Computer Science and Engineering</div>
+      <div class="edu-detail">Human-Computer Interaction Lab</div>
+      <div class="edu-years">2015–2020</div>
+    </div><div class="edu-item">
+      <div class="edu-school">Carnegie Mellon University</div>
+      <div class="edu-degree">M.S. &amp; B.S., Electrical and Computer Engineering</div>
+      <div class="edu-detail">B.S. with University Honors</div>
+      <div class="edu-years">2005–2010</div>
+    </div></div>
+    </div>
+  </div>
+</section>
+
+<section id="impact">
+  <div class="wrap">
+    <h2>Impact</h2>
+    <div class="case case-current">
+    <div class="f-head">
+      <div class="f-label">Now · Current Role</div>
+      <h3 class="f-title">Bringing AI to Radiation Oncology</h3>
+      <div class="f-org">Oncosoft · CTO &amp; Head of Global Business · 2024–present</div>
+      <p class="f-lead">As CTO and Head of Global Business, I lead the technology and global expansion of Oncosoft — an end-to-end AI software ecosystem bringing precision and efficiency to radiation oncology.</p>
+    </div>
+    <div class="media m-wide fit-contain"><img src="assets/img/oncosoft-pipeline.png" alt="Oncosoft — overview" loading="lazy" /></div>
+    <div class="fmetrics"><div class="fmetric"><div class="fmetric-v">25%</div><div class="fmetric-l">Domestic market share</div></div><div class="fmetric"><div class="fmetric-v">#1</div><div class="fmetric-l">Japan clinical benchmark</div></div><div class="fmetric"><div class="fmetric-v">300K+</div><div class="fmetric-l">Patient cases processed</div></div><div class="fmetric"><div class="fmetric-v">~1 min</div><div class="fmetric-l">Organ auto-contouring</div></div></div>
+    <div class="certs"><span class="certs-k">Regulatory clearances</span><div class="cert-chips"><span class="cert">Korea (MFDS)<b>2022.02</b></span><span class="cert">US (FDA)<b>2025.02</b></span><span class="cert">Japan<b>2025.04</b></span><span class="cert">Singapore<b>2025.10</b></span><span class="cert">Brazil<b>2025.12</b></span></div></div>
+    <div class="fblocks"><div class="fblock"><div class="fblock-k">Problem</div><p>Radiation therapy planning depends on manual organ and tumor contouring on CT/MR — slow, variable between clinicians, and a bottleneck to treating more patients.</p></div><div class="fblock"><div class="fblock-k">Approach</div><p>OncoStudio auto-contours organs-at-risk and tumors in about a minute through a zero-click workflow integrated with PACS, TPS, and EMR. It anchors a full platform — OncoFlow, OncoStudio, OncoPlan, and OncoRPT — spanning imaging, planning, delivery, and follow-up.</p></div><div class="fblock"><div class="fblock-k">Impact</div><p>Captured 25% domestic market share and ranked #1 in clinical performance benchmarks by leading Japanese research institutions, with 300,000+ patient cases processed. I lead R&amp;D and global expansion across the US, Latin America, Southeast Asia, and the Middle East.</p></div></div>
+    <div class="case-video"><div class="side-label">OncoStudio — AI auto-contouring of organs and tumors on CT/MR</div><div class="media m-wide is-video"><video autoplay muted loop preload="auto" playsinline><source src="assets/img/oncosoft-viewer.mp4" type="video/mp4" /></video></div></div>
+    <div class="fgallery"><figure><div class="media m-tile"><img src="assets/img/oncosoft-booth.jpg" alt="Meeting clinicians and partners at a global oncology conference" loading="lazy" /></div><figcaption>Meeting clinicians and partners at a global oncology conference</figcaption></figure><figure><div class="media m-tile"><img src="assets/img/aapm-award.jpg" alt="Receiving the International Symposium Award — 5th KSMP-JSMP-KAMPiNA Joint Symposium at AAPM, 2025" loading="lazy" /></div><figcaption>Receiving the International Symposium Award — 5th KSMP-JSMP-KAMPiNA Joint Symposium at AAPM, 2025</figcaption></figure><figure><div class="media m-tile"><img src="assets/img/oncosoft-group.jpg" alt="With the Oncosoft team on-site" loading="lazy" /></div><figcaption>With the Oncosoft team on-site</figcaption></figure></div>
+    <div class="f-foot"><div></div><div class="f-links"><a class="btn btn-sm" href="https://oncosoft.io" target="_blank" rel="noopener">Oncosoft ↗</a></div></div>
+  </div><div class="case">
+    <div class="f-head">
+      <div class="f-label">Flagship Career Impact · 2020–2023</div>
+      <h3 class="f-title">AI Cloud Platform for 3D-Bioprinted Wound Regeneration</h3>
+      <div class="f-org">ROKIT Healthcare · CAIO &amp; Vice President · 2020–2023</div>
+      <p class="f-lead">An AI platform that turns a single tablet photo of a wound into a ready-to-print 3D patch model in seconds — then bio-prints it at the point of care to treat diabetic foot ulcers, deployed across the US, Asia, the Middle East, and Latin America.</p>
+    </div>
+    <div class="media m-wide"><img src="assets/img/rokit-hero.jpg" alt="ROKIT Healthcare — overview" loading="lazy" /></div>
+    <div class="fmetrics"><div class="fmetric"><div class="fmetric-v">$1B+</div><div class="fmetric-l">Long-term contracts</div></div><div class="fmetric"><div class="fmetric-v">FDA + CE</div><div class="fmetric-l">Regulatory clearance</div></div><div class="fmetric"><div class="fmetric-v">0→15</div><div class="fmetric-l">AI team built</div></div><div class="fmetric"><div class="fmetric-v">~30 sec</div><div class="fmetric-l">Photo → printable 3D model</div></div></div>
+    
+    <div class="fblocks"><div class="fblock"><div class="fblock-k">Problem</div><p>Personalized regenerative patches require precise scanning, CAD modeling, and bioprinting — work that a surgical team anywhere in the world cannot realistically do at the point of care. To reach patients globally, the hard part had to disappear into software.</p></div><div class="fblock"><div class="fblock-k">Approach</div><p>We built an AI platform (AiD Regen) that, from a single tablet RGB-D photo, segments the wound, reconstructs its 3D surface, and generates a ready-to-print 3D model in about 30 seconds. Production-grade MLOps on Google Cloud (Vertex AI, GKE) delivers identical quality at any clinical site — no on-site AI specialist required.</p></div><div class="fblock"><div class="fblock-k">Impact</div><p>Founded and scaled the AI department from zero to 15, achieved both FDA and CE clearance, and drove the full commercial cycle from MVP to $1B+ in long-term contracts across the US, India, Turkey, the Middle East, and Latin America. Launched on AWS in 6 months, then migrated to Google Cloud in 3 — the work became a featured Google Cloud customer story.</p></div></div>
+    <div class="case-video"><div class="side-label">Technology overview — CVPR 2022 (wound segmentation &amp; 3D reconstruction)</div><div class="media m-wide"><iframe src="https://www.youtube.com/embed/BlcT63kwh6o" title="AI Cloud Platform for 3D-Bioprinted Wound Regeneration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+    <div class="fgallery"><figure><div class="media m-tile"><img src="assets/img/rokit-modeling.jpg" alt="Wound capture → AI segmentation &amp; 3D reconstruction" loading="lazy" /></div><figcaption>Wound capture → AI segmentation &amp; 3D reconstruction</figcaption></figure><figure><div class="media m-tile"><img src="assets/img/rokit-patch.jpg" alt="Personalized 3D-bioprinted regeneration patch" loading="lazy" /></div><figcaption>Personalized 3D-bioprinted regeneration patch</figcaption></figure><figure><div class="media m-tile"><img src="assets/img/rokit-application.jpg" alt="Point-of-care application in the operating room" loading="lazy" /></div><figcaption>Point-of-care application in the operating room</figcaption></figure></div>
+    <div class="f-foot"><div class="f-partners"><span class="wm">Google Cloud</span><span class="wm">AWS</span></div><div class="f-links"><a class="btn btn-sm" href="https://cloud.google.com/customers/rokithealthcare?hl=ko" target="_blank" rel="noopener">Google Cloud customer story ↗</a><a class="btn btn-sm" href="https://biz.chosun.com/science-chosun/bio/2022/10/30/FAFBDKQ2HRGR7CEZK2YZVURY4U/" target="_blank" rel="noopener">Interview — Chosun Biz ↗</a><a class="btn btn-sm" href="https://doi.org/10.1109/CVPR52688.2022.00257" target="_blank" rel="noopener">Paper — CVPR 2022 ↗</a></div></div>
+  </div>
+  </div>
+</section>
+
+<section id="ventures">
+  <div class="wrap">
+    <h2>Ventures &amp; Research</h2>
+    <article class="vcard-h">
+    <div class="media m-card"><img src="assets/img/kai.webp" alt="Kai Health — product" loading="lazy" /></div>
+    <div class="vcard-body">
+      <div class="vcard-cat">Medical AI</div>
+      <h3>Vita Embryo — AI Embryo Assessment</h3>
+      <div class="vcard-meta">Kai Health · 2023–2024</div>
+      <p>Led AI diagnostic R&amp;D for embryo assessment (Vita Embryo) to MFDS (Korean FDA) clinical-trial approval, and rebuilt the product lifecycle to cut release cycles from ~2 months to 2–3 weeks.</p>
+      <div class="tags"><span class="tag">Diagnostics</span><span class="tag">Regulatory</span><span class="tag">MLOps</span></div>
+    </div>
+  </article>
+    <div class="roots"><div class="side-label">Research roots</div><div class="root-item"><div><h3>AR / HCI research at SNU &amp; CMU</h3><div class="root-meta">Seoul National University · Carnegie Mellon · 2007–2020</div></div><p>A decade of human-computer interaction and augmented-reality research — IoT-device interaction in AR, 3D interaction techniques, and mobile sensing — published at ACM and IEEE venues including UIST and CHI. The technical foundation behind the products above.</p></div></div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap"><h2>Experience</h2><div class="exp-item current">
+      <div class="exp-head"><h3>CTO &amp; Head of Global Business</h3><span class="exp-dates">Nov 2024 — Present</span></div>
+      <div class="exp-org">Oncosoft · <span>Seoul, Korea</span></div>
+      <ul><li>Lead 20+ staff across R&amp;D and global sales in Seoul and the US, driving AI-powered radiation therapy solutions that captured 25% domestic market share and ranked #1 in clinical performance benchmarks by leading Japanese research institutions.</li><li>Spearhead international expansion across the US, Latin America, Southeast Asia, and the Middle East, securing 10+ distribution partnerships and targeting 100% year-over-year revenue growth.</li></ul>
+    </div><div class="exp-item">
+      <div class="exp-head"><h3>CTO</h3><span class="exp-dates">Nov 2023 — Oct 2024</span></div>
+      <div class="exp-org">Kai Health · <span>Seoul, Korea</span></div>
+      <ul><li>Led a 10+ member R&amp;D team and established a structured product development lifecycle, reducing release cycles from ~2 months to 2–3 weeks through overlapping, parallelized workflows.</li><li>Elevated AI model accuracy and reliability by enforcing data integrity standards and advancing model architecture, culminating in MFDS (Korean FDA) clinical trial approval.</li></ul>
+    </div><div class="exp-item">
+      <div class="exp-head"><h3>CAIO &amp; Vice President</h3><span class="exp-dates">Oct 2020 — Aug 2023</span></div>
+      <div class="exp-org">ROKIT Healthcare · <span>Seoul, Korea</span></div>
+      <ul><li>Founded and scaled the AI department from zero to 15 members, leading the development of an AI-powered cloud platform for 3D bioprinted wound regeneration targeting diabetic foot ulcers (DFU).</li><li>Drove the full commercial cycle from MVP to $1B+ in long-term contracts across the US, India, Turkey, the Middle East, and Latin America, achieving both FDA and CE clearance for the solution.</li><li>Launched the AI cloud service on AWS in 6 months, then migrated to Google Cloud under a strategic partnership, establishing production-grade MLOps infrastructure in 3 months to support global commercial deployment.</li></ul>
+    </div><div class="exp-item">
+      <div class="exp-head"><h3>PM, Doctoral Researcher</h3><span class="exp-dates">May 2016 — Apr 2020</span></div>
+      <div class="exp-org">HCI Lab @ Seoul National University · <span>Seoul, Korea</span></div>
+      <ul><li>Led and completed 4-year AR/MR research projects for Samsung Research, securing grants and publishing top-tier conference papers (UIST, CHI).</li></ul>
+    </div><div class="exp-item">
+      <div class="exp-head"><h3>Software Developer</h3><span class="exp-dates">Oct 2014 — Dec 2015</span></div>
+      <div class="exp-org">Bluegg (startup) · <span>Seoul, Korea</span></div>
+      <ul><li>Developed Android and web applications for a social donation campaign platform.</li></ul>
+    </div><div class="exp-item">
+      <div class="exp-head"><h3>UX Researcher</h3><span class="exp-dates">Aug 2010 — Dec 2013</span></div>
+      <div class="exp-org">Samsung Electronics · <span>Suwon, Korea</span></div>
+      <ul><li>Designed interfaces for mobile, tablet, TV, and smartwatch, developing prototypes for proof-of-concept across convergence scenarios.</li></ul>
+    </div><div class="exp-item">
+      <div class="exp-head"><h3>Intern, HCI Development Team</h3><span class="exp-dates">Jun 2009 — Aug 2009</span></div>
+      <div class="exp-org">Samsung R&amp;D Center Silicon Valley · <span>San Jose, CA</span></div>
+      <ul><li>Created a mobile 3D interface using sensors and image processing; resulting work was recognized with a Samsung Best Paper Award and a granted US patent.</li></ul>
+    </div></div>
+</section>
+
+<section id="speaking">
+  <div class="wrap">
+    <h2>Speaking &amp; Teaching</h2>
+    <div class="speak-media"><div class="media m-wide"><img src="assets/img/speaking.jpg" alt="Speaking on stage — conference photo" loading="lazy" /></div></div>
+    <div class="side-label speak-sub">Invited talks</div>
+    <ul class="col-list cols"><li><span class="li-date">Jul 2025</span><span>AAPM International Joint Symposium (KSMP-JSMP-KAMPiNA)</span></li><li><span class="li-date">Mar 2025</span><span>NTMP Symposium — AI-Driven Radiation Oncology</span></li><li><span class="li-date">Feb 2024</span><span>National Information Society Agency (NIA) AI Trend Seminar</span></li><li><span class="li-date">May 2023</span><span>Google Cloud Startup Summit, APAC — Panel Discussion</span></li><li><span class="li-date">Apr 2023</span><span>Soongsil University Technical Information Seminar</span></li><li><span class="li-date">Dec 2022</span><span>Korea Software Industry Association (KOSA) Open Seminar</span></li><li><span class="li-date">Nov 2022</span><span>Samsung Software Developer Conference (SSDC)</span></li><li><span class="li-date">Nov 2022</span><span>Sungkyunkwan University Sustainable IT Technology Seminar</span></li><li><span class="li-date">Sep 2022</span><span>KAIST GSTC Colloquium</span></li><li><span class="li-date">Sep 2022</span><span>Soongsil University Technical Information Seminar</span></li><li><span class="li-date">Aug 2022</span><span>AWS Public Sector AI/ML Cloud Alliance (Asia Pacific &amp; Japan)</span></li><li><span class="li-date">Mar 2022</span><span>Naver Techtalk</span></li><li><span class="li-date">Jan 2022</span><span>Korea Institute of Machinery and Materials (KIMM) AI Seminar</span></li><li><span class="li-date">Jun 2021</span><span>ROKIT Open Innovation — Trends in AI Technology and Its Medical Applications</span></li><li><span class="li-date">May 2021</span><span>ROKIT Open Innovation — Emerging A.I. Technologies in Personalized Medicine</span></li></ul>
+    <div class="side-label speak-sub">Teaching</div>
+    <ul class="col-list cols"><li><span class="li-date">2021, 2022</span><span>AI-based Bioprinting Technology and Use Cases in the Medical Field <em>— Daegu Health College</em></span></li><li><span class="li-date">2021</span><span>AI Technology in Healthcare and Medical Industry <em>— Handong Global University</em></span></li><li><span class="li-date">2018</span><span>Scenario-Based UX Design <em>— Seoul National University</em></span></li><li><span class="li-date">2018</span><span>Chatbot Development Workshop <em>— Seoul National University</em></span></li><li><span class="li-date">2018</span><span>Simple User Experiment with Quantitative Usability Testing <em>— Seoul National University</em></span></li><li><span class="li-date">2017</span><span>Electronics Prototyping Using Arduino <em>— Seoul National University</em></span></li></ul>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <h2>Research &amp; Patents</h2>
+    <ul class="pub-list"><li class="pub"><span class="pub-year">2024</span>
+      <div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.1109/ICME57554.2024.10687901" target="_blank" rel="noopener">InFusionSurf: Refining Neural RGB-D Surface Reconstruction Using Per-Frame Intrinsic Refinement and TSDF Fusion Prior Learning</a></div>
+      <div class="pub-authors">Seunghwan Lee, Gwanmo Park, Hyewon Son, Jiwon Ryu, and Han Joo Chae</div>
+      <div class="pub-venue">IEEE International Conference on Multimedia and Expo (ICME '24) <span class="pub-type">Conference</span> <a class="pub-extra" href="https://rokit-healthcare.github.io/InFusionSurf/" target="_blank" rel="noopener">Project page ↗</a></div></div></li><li class="pub"><span class="pub-year">2023</span>
+      <div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.2196/37604" target="_blank" rel="noopener">An Artificial Intelligence Exercise Coaching Mobile App: Development and Randomized Controlled Trial to Verify Its Effectiveness in Posture Correction</a></div>
+      <div class="pub-authors">Han Joo Chae, Ji-Been Kim, Gwanmo Park, David M. O'Sullivan, Jinwook Seo, and Jung-Jun Park</div>
+      <div class="pub-venue">Interactive Journal of Medical Research (IJMR '23) <span class="pub-type">Journal</span></div></div></li><li class="pub"><span class="pub-year">2022</span>
+      <div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.1109/CVPR52688.2022.00257" target="_blank" rel="noopener">Generating 3D Bio-Printable Patches Using Wound Segmentation and Reconstruction to Treat Diabetic Foot Ulcers</a></div>
+      <div class="pub-authors">Han Joo Chae, Seunghwan Lee, Hyewon Son, Seungyeob Han, and Taebin Lim</div>
+      <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR '22) <span class="pub-type">Conference</span></div></div></li><li class="pub"><span class="pub-year">2020</span>
+      <div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.1145/3334480.3382885" target="_blank" rel="noopener">ARphy: Managing Photo Collections Using Physical Objects in AR</a></div>
+      <div class="pub-authors">Han Joo Chae, Youli Chang, Minji Kim, Gwanmo Park, and Jinwook Seo</div>
+      <div class="pub-venue">Extended Abstracts of the 2020 CHI Conference on Human Factors in Computing Systems (CHI EA '20) <span class="pub-type">Conference</span></div></div></li><li class="pub"><span class="pub-year">2020</span>
+      <div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.5626/JOK.2020.47.10.900" target="_blank" rel="noopener">Leveraging the Physical Properties of Real Objects to Manage Digital Photography in Augmented Reality</a></div>
+      <div class="pub-authors">Han Joo Chae, Youli Chang, Minji Kim, Gwanmo Park, and Jinwook Seo</div>
+      <div class="pub-venue">Journal of Korean Institute of Information Scientists and Engineers (JOK '20) <span class="pub-type">Journal</span></div></div></li><li class="pub"><span class="pub-year">2020</span>
+      <div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.23019/kingpc.16.2.202004.002" target="_blank" rel="noopener">SCARII: A Study to Advise Safety Concerns Caused by Involuntary Inputs in Augmented Reality</a></div>
+      <div class="pub-authors">Han Joo Chae, Jeong-in Hwang, Yieun Kim, Kyle Koh, and Jinwook Seo</div>
+      <div class="pub-venue">Journal of Korean Institute of Next Generation Computing <span class="pub-type">Journal</span></div></div></li><li class="pub"><span class="pub-year">2019</span>
+      <div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.1145/3290607.3312754" target="_blank" rel="noopener">BrainShare: A Glimpse of Social Interaction for Locked-in Syndrome Patients</a></div>
+      <div class="pub-authors">Sarah Faltaous, Gabriel Haas, Liliana Barrios, Andreas Seiderer, Sebastian Felix Rauh, Han Joo Chae, Stefan Schneegass, and Florian Alt</div>
+      <div class="pub-venue">Extended Abstracts of the 2019 CHI Conference on Human Factors in Computing Systems (CHI EA '19) <span class="pub-type">Conference</span></div></div></li><li class="pub"><span class="pub-year">2018</span>
+      <div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.1145/3242587.3242631" target="_blank" rel="noopener">Wall-based Space Manipulation Technique for Efficient Placement of Distant Objects in Augmented Reality</a></div>
+      <div class="pub-authors">Han Joo Chae, Jeong-in Hwang, and Jinwook Seo</div>
+      <div class="pub-venue">31st Annual ACM Symposium on User Interface Software and Technology (UIST '18) <span class="pub-type">Conference</span></div></div></li><li class="pub"><span class="pub-year">2016</span>
+      <div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.1145/2984751.2984771" target="_blank" rel="noopener">Prevention of Unintentional Input While Using Wrist Rotation for Device Configuration</a></div>
+      <div class="pub-authors">Han Joo Chae, Jeong-in Hwang, Yuri Choi, Yieun Kim, Kyle Koh, and Jinwook Seo</div>
+      <div class="pub-venue">29th Annual Symposium on User Interface Software and Technology (UIST '16 Adjunct) <span class="pub-type">Conference</span></div></div></li><li class="pub"><span class="pub-year">2016</span>
+      <div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.1145/2962735.2962746" target="_blank" rel="noopener">Defining Rules Among Devices in Smart Environment Using an Augmented Reality Headset</a></div>
+      <div class="pub-authors">Heonjin Park, Kyle Koh, Yuri Choi, Han Joo Chae, Jeongin Hwang, and Jinwook Seo</div>
+      <div class="pub-venue">Second International Conference on IoT in Urban Space (Urb-IoT '16) <span class="pub-type">Conference</span></div></div></li></ul>
+    <p class="note-link">Full list on <a href="https://scholar.google.com/citations?hl=en&amp;user=GM3F4jsAAAAJ" target="_blank" rel="noopener">Google Scholar →</a></p>
+    <div class="patents-wrap">
+      <div class="side-label">Granted patents (14)</div>
+      <ul class="patent-list"><li class="patent"><span class="patent-id">US12035277B2</span><span class="patent-title">Method and apparatus for providing notification</span><span class="patent-year">2024</span></li><li class="patent"><span class="patent-id">US11445475B2</span><span class="patent-title">Method and apparatus for providing notification</span><span class="patent-year">2022</span></li><li class="patent"><span class="patent-id">US11443611B2</span><span class="patent-title">Method of providing activity notification and device thereof</span><span class="patent-year">2022</span></li><li class="patent"><span class="patent-id">US11057866B2</span><span class="patent-title">Method and apparatus for providing notification</span><span class="patent-year">2021</span></li><li class="patent"><span class="patent-id">US10924147B2</span><span class="patent-title">Wearable device for transmitting a message comprising strings associated with a state of a user</span><span class="patent-year">2021</span></li><li class="patent"><span class="patent-id">US10852841B2</span><span class="patent-title">Method of performing function of device and device for performing the method</span><span class="patent-year">2020</span></li><li class="patent"><span class="patent-id">US10748409B2</span><span class="patent-title">Method of providing activity notification and device thereof</span><span class="patent-year">2020</span></li><li class="patent"><span class="patent-id">US10674193B2</span><span class="patent-title">Content providing method and device</span><span class="patent-year">2020</span></li><li class="patent"><span class="patent-id">US10638452B2</span><span class="patent-title">Method and apparatus for providing notification</span><span class="patent-year">2020</span></li><li class="patent"><span class="patent-id">US10638451B2</span><span class="patent-title">Method and apparatus for providing notification</span><span class="patent-year">2020</span></li><li class="patent"><span class="patent-id">AU2016235039B2</span><span class="patent-title">Method of performing function of device and device for performing the method</span><span class="patent-year">2017</span></li><li class="patent"><span class="patent-id">US9629120B2</span><span class="patent-title">Method and apparatus for providing notification</span><span class="patent-year">2017</span></li><li class="patent"><span class="patent-id">US9338620B2</span><span class="patent-title">Method and apparatus for executing alarm with respect to missed received call for mobile communication terminal</span><span class="patent-year">2016</span></li><li class="patent"><span class="patent-id">US8310537B2</span><span class="patent-title">Detecting ego-motion on a mobile device displaying three-dimensional content</span><span class="patent-year">2012</span></li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="awards">
+  <div class="wrap"><h2>Awards &amp; Honors</h2><ul class="pub-list"><li class="award"><span class="award-year">2025</span><div><div class="award-title">International Symposium Award</div><div class="award-detail">The 5th KSMP-JSMP-KAMPiNA Joint Symposium at AAPM.</div></div></li><li class="award"><span class="award-year">2018</span><div><div class="award-title">Naver Ph.D. Fellowship</div><div class="award-detail">Outstanding research achievement in computer science.</div></div></li><li class="award"><span class="award-year">2018</span><div><div class="award-title">3rd Place Winner — BR41N.IO Brain-Computer Interface Designers Hackathon</div><div class="award-detail">At UIST School.</div></div></li><li class="award"><span class="award-year">2016</span><div><div class="award-title">Google Travel Grants</div><div class="award-detail">UIST '16 poster presentation.</div></div></li><li class="award"><span class="award-year">2009</span><div><div class="award-title">Samsung Best Paper Award</div><div class="award-detail">Recognized for a paper on mobile 3D interface at Samsung R&amp;D Center.</div></div></li><li class="award"><span class="award-year">2009</span><div><div class="award-title">University Honors</div><div class="award-detail">Exemplary academic achievement at Carnegie Mellon University.</div></div></li><li class="award"><span class="award-year">2009</span><div><div class="award-title">Eta Kappa Nu</div><div class="award-detail">ECE Honor Society member.</div></div></li></ul></div>
+</section>
+
+<section id="press">
+  <div class="wrap"><h2>Press &amp; Media</h2><ul class="press-list"><li class="press-item"><a href="https://cloud.google.com/customers/rokithealthcare?hl=ko" target="_blank" rel="noopener">ROKIT Healthcare: Building a fast, secure global regeneration platform with MLOps</a>
+      <div class="press-meta">Google Cloud · 2023</div><div class="press-note">Customer success story featuring the AI bioprinting platform and CAIO interview.</div></li><li class="press-item"><a href="https://biz.chosun.com/science-chosun/bio/2022/10/30/FAFBDKQ2HRGR7CEZK2YZVURY4U/" target="_blank" rel="noopener">Interview — AI in personalized regenerative medicine</a>
+      <div class="press-meta">Chosun Biz (Science Chosun) · 2022-10-30</div></li></ul></div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-card">
+      <h2>Contact</h2>
+      <div class="big">hanjoo.chae@gmail.com</div>
+      <div class="btns" style="justify-content:center;margin-bottom:0">
+        <a class="btn btn-primary" href="mailto:hanjoo.chae@gmail.com">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/hanjoochae" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://scholar.google.com/citations?hl=en&amp;user=GM3F4jsAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">© <span id="yr"></span> Han Joo Chae · Seoul, Korea</div></footer>
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+</body>
+</html>

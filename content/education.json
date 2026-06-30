@@ -1,0 +1,16 @@
+[
+  {
+    "school": "Seoul National University",
+    "degree": "Ph.D., Computer Science and Engineering",
+    "detail": "Human-Computer Interaction Lab",
+    "start": "2015",
+    "end": "2020"
+  },
+  {
+    "school": "Carnegie Mellon University",
+    "degree": "M.S. & B.S., Electrical and Computer Engineering",
+    "detail": "B.S. with University Honors",
+    "start": "2005",
+    "end": "2010"
+  }
+]

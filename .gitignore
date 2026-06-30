@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+**/.DS_Store
+
+# Node
+node_modules/
+
+# Local-only master media (originals). The web-optimized versions live in docs/assets/img/
+# and ARE committed. Keep these masters on your machine; they don't need to be in git.
+orig_sources/
+
+# Old Weebly site export — compressed backup, kept locally only
+archive-weebly-*.zip
+archive/

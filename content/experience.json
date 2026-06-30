@@ -1,0 +1,77 @@
+[
+  {
+    "company": "Oncosoft",
+    "role": "CTO & Head of Global Business",
+    "location": "Seoul, Korea",
+    "start": "2024-11",
+    "end": "present",
+    "current": true,
+    "bullets": [
+      "Lead 20+ staff across R&D and global sales in Seoul and the US, driving AI-powered radiation therapy solutions that captured 25% domestic market share and ranked #1 in clinical performance benchmarks by leading Japanese research institutions.",
+      "Spearhead international expansion across the US, Latin America, Southeast Asia, and the Middle East, securing 10+ distribution partnerships and targeting 100% year-over-year revenue growth."
+    ]
+  },
+  {
+    "company": "Kai Health",
+    "role": "CTO",
+    "location": "Seoul, Korea",
+    "start": "2023-11",
+    "end": "2024-10",
+    "bullets": [
+      "Led a 10+ member R&D team and established a structured product development lifecycle, reducing release cycles from ~2 months to 2–3 weeks through overlapping, parallelized workflows.",
+      "Elevated AI model accuracy and reliability by enforcing data integrity standards and advancing model architecture, culminating in MFDS (Korean FDA) clinical trial approval."
+    ]
+  },
+  {
+    "company": "ROKIT Healthcare",
+    "role": "CAIO & Vice President",
+    "location": "Seoul, Korea",
+    "start": "2020-10",
+    "end": "2023-08",
+    "bullets": [
+      "Founded and scaled the AI department from zero to 15 members, leading the development of an AI-powered cloud platform for 3D bioprinted wound regeneration targeting diabetic foot ulcers (DFU).",
+      "Drove the full commercial cycle from MVP to $1B+ in long-term contracts across the US, India, Turkey, the Middle East, and Latin America, achieving both FDA and CE clearance for the solution.",
+      "Launched the AI cloud service on AWS in 6 months, then migrated to Google Cloud under a strategic partnership, establishing production-grade MLOps infrastructure in 3 months to support global commercial deployment."
+    ]
+  },
+  {
+    "company": "HCI Lab @ Seoul National University",
+    "role": "PM, Doctoral Researcher",
+    "location": "Seoul, Korea",
+    "start": "2016-05",
+    "end": "2020-04",
+    "bullets": [
+      "Led and completed 4-year AR/MR research projects for Samsung Research, securing grants and publishing top-tier conference papers (UIST, CHI)."
+    ]
+  },
+  {
+    "company": "Bluegg (startup)",
+    "role": "Software Developer",
+    "location": "Seoul, Korea",
+    "start": "2014-10",
+    "end": "2015-12",
+    "bullets": [
+      "Developed Android and web applications for a social donation campaign platform."
+    ]
+  },
+  {
+    "company": "Samsung Electronics",
+    "role": "UX Researcher",
+    "location": "Suwon, Korea",
+    "start": "2010-08",
+    "end": "2013-12",
+    "bullets": [
+      "Designed interfaces for mobile, tablet, TV, and smartwatch, developing prototypes for proof-of-concept across convergence scenarios."
+    ]
+  },
+  {
+    "company": "Samsung R&D Center Silicon Valley",
+    "role": "Intern, HCI Development Team",
+    "location": "San Jose, CA",
+    "start": "2009-06",
+    "end": "2009-08",
+    "bullets": [
+      "Created a mobile 3D interface using sensors and image processing; resulting work was recognized with a Samsung Best Paper Award and a granted US patent."
+    ]
+  }
+]

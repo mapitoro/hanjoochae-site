@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Vita Embryo — AI Embryo Assessment",
+    "org": "Kai Health",
+    "year": "2023–2024",
+    "category": "Medical AI",
+    "featured": true,
+    "image": "assets/img/kai.jpg",
+    "blurb": "Led AI diagnostic R&D for embryo assessment (Vita Embryo) to MFDS (Korean FDA) clinical-trial approval, and rebuilt the product lifecycle to cut release cycles from ~2 months to 2–3 weeks.",
+    "tags": ["Diagnostics", "Regulatory", "MLOps"]
+  },
+  {
+    "title": "AR / HCI research at SNU & CMU",
+    "org": "Seoul National University · Carnegie Mellon",
+    "year": "2007–2020",
+    "category": "Research roots",
+    "featured": false,
+    "blurb": "A decade of human-computer interaction and augmented-reality research — IoT-device interaction in AR, 3D interaction techniques, and mobile sensing — published at ACM and IEEE venues including UIST and CHI. The technical foundation behind the products above.",
+    "tags": ["Augmented Reality", "HCI", "Computer Vision"]
+  }
+]
