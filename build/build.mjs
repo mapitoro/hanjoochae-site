@@ -213,8 +213,13 @@ const pubsHtml = publications
       <div class="pub-venue">${esc(p.venue)} <span class="pub-type">${esc(p.type)}</span>${p.projectPage ? ` <a class="pub-extra" href="${esc(p.projectPage)}" target="_blank" rel="noopener">Project page ↗</a>` : ""}</div></div></li>`)
   .join("");
 const patentsHtml = patents
-  .map((p) => `<li class="patent"><span class="patent-id">${esc(p.id)}</span><span class="patent-title">${esc(p.title)}</span><span class="patent-year">${esc(p.year)}</span></li>`)
+  .map((p) => {
+    const span = p.firstYear === p.lastYear ? `${p.lastYear}` : `${p.firstYear}–${p.lastYear}`;
+    const grants = p.count > 1 ? `<span class="patent-count">${p.count} grants</span>` : "";
+    return `<li class="patent"><span class="patent-id">${esc(p.id)}</span><span class="patent-title">${esc(p.title)}${grants}</span><span class="patent-year">${esc(span)}</span></li>`;
+  })
   .join("");
+const totalGrants = patents.reduce((s, p) => s + (p.count || 1), 0);
 
 // ---------- awards / news / press ----------
 const awardsHtml = awards
@@ -414,10 +419,11 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);bac
 .pub-extra{font-size:12px;font-weight:500;margin-left:8px;white-space:nowrap}
 .note-link{margin-top:18px;font-size:14px}
 .patents-wrap{margin-top:36px}
-.patent{display:grid;grid-template-columns:130px 1fr 56px;gap:14px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.patent{display:grid;grid-template-columns:128px 1fr 92px;gap:14px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--line);font-size:13.5px}
 .patent-id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent-deep);font-size:12.5px}
 .patent-title{color:var(--ink-2)}
-.patent-year{color:var(--muted);text-align:right}
+.patent-count{display:inline-block;margin-left:8px;padding:1px 7px;border:1px solid var(--line);border-radius:10px;font-size:11px;color:var(--muted);white-space:nowrap;vertical-align:middle}
+.patent-year{color:var(--muted);text-align:right;white-space:nowrap}
 
 /* awards / news / press */
 .award{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);list-style:none}
@@ -546,7 +552,7 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
     <ul class="pub-list">${pubsHtml}</ul>
     <p class="note-link">Full list on <a href="${esc(profile.links.scholar)}" target="_blank" rel="noopener">Google Scholar →</a></p>
     <div class="patents-wrap">
-      <div class="side-label">Granted patents (${patents.length})</div>
+      <div class="side-label">Granted patents — ${patents.length} invention families · ${totalGrants} grants</div>
       <ul class="patent-list">${patentsHtml}</ul>
     </div>
   </div>

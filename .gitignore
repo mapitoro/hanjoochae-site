@@ -12,3 +12,14 @@ orig_sources/
 # Old Weebly site export — compressed backup, kept locally only
 archive-weebly-*.zip
 archive/
+
+# Editor / scratch artifacts (never commit)
+*.tmp
+*.log
+.cache/
+
+# ── Tracked on purpose (do NOT ignore) ───────────────────────────────
+# knowledge/   — markdown reconciliation tables (publications/patents); committed and
+#                referenced by CLAUDE.md. All data is public (USPTO / published papers),
+#                no secrets, so it belongs in git.
+# content/, build/, docs/, *.md docs — committed (see CLAUDE.md "Repository layout").

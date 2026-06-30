@@ -118,14 +118,65 @@ parsed details with the user before committing if anything is ambiguous.
 ### "I published a new paper" / "update my publications"
 1. If given a Google Scholar link, fetch it and find papers not already in
    `publications.json` (profile's Scholar: see `profile.json` → `links.scholar`).
-2. Add new entries to the **top** of `publications.json` with
-   `authors`, `year`, `title`, `venue`, `type` ("Conference" | "Journal").
-3. Optionally add a `news.json` entry announcing it.
-4. Build, commit, push.
+   Scholar is JS-rendered — `web_fetch` returns an empty shell, so read it with the
+   Claude-in-Chrome browser tools (`navigate` + `get_page_text`).
+2. **Inclusion rule — full papers only.** Add **only full conference papers and full
+   journal papers**. **Exclude** preprints (arXiv), conference abstracts / posters /
+   supplement e-pages (e.g. Red Journal `e###` items, ESHRE/ASRM abstracts), demos,
+   and lab/profile notes. If a preprint is later accepted to a full venue, add it then
+   with the final venue.
+3. Add new entries to the **top** of `publications.json` following the reference style
+   (see "Reference style" below): `authors`, `year`, `title`, `venue`, `type`
+   ("Conference" | "Journal"), `link`, optional `projectPage`.
+4. Optionally add a `news.json` entry announcing it.
+5. Build, commit, push.
 
 ### "I have a new patent"
-1. Add to the top of `patents.json`: `{ "id", "year", "title" }`.
-2. Build, commit, push.
+1. **Inclusion rule — granted only.** Add **only granted / published (registered)
+   patents**. **Exclude** pending applications (Scholar shows these as
+   `US Patent App. NN/NNN,NNN` with no grant number).
+2. Verify Han Joo Chae is a listed inventor (Google Patents → `patents.google.com`;
+   inventor appears as "CHAE, HAN-JOO" / "Han-joo CHAE"). Watch for Scholar
+   misattributions to a different "J Han"/"J Chae".
+3. **Display rule — family-representative (span + count).** Most grants are continuations
+   of the same invention (identical title, same disclosure). The site shows **one row per
+   invention family**, anchored on the family's **earliest** grant (`id`), and annotated
+   with the grant **year range** (`firstYear`–`lastYear`) and **grant count** (`count`).
+   If a new grant belongs to a family already shown, **update that family's `lastYear` and
+   `count`** (do not add a near-duplicate row). Only add a new row for a genuinely new
+   invention. The full grant inventory by family lives in `knowledge/patents-table.md`.
+4. Add/update at the top of `patents.json` following the reference style below:
+   `{ "id", "title", "firstYear", "lastYear", "count" }`.
+5. Build, commit, push.
+
+### Reference style (publications & patents)
+
+**Publications** (`publications.json`):
+- `authors` — full first-name last-name order, comma-separated, `and` before the last
+  author; Han Joo Chae's name written in full as printed on the paper.
+- `year` — four-digit integer.
+- `title` — full title, Title Case as published.
+- `venue` — full venue name with a parenthetical short name + two-digit year, e.g.
+  `IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR '22)`.
+- `type` — `Conference` or `Journal`.
+- `link` — DOI URL preferred; `projectPage` optional.
+
+**Patents** (`patents.json`):
+- `id` — the family's **earliest** granted patent, normalized: country code + number
+  (no commas/spaces) + kind code. `US Patent 9,672,483` → `US9672483B2`; Australian grant
+  → `AU2016235039B2`. US utility grants are normally `B2`; confirm on the grant if unsure.
+- `firstYear` / `lastYear` — grant year of the earliest / latest grant in the family
+  (equal for a single-grant family). `count` — number of grants in the family.
+- `title` — official patent title as printed on the grant.
+- Newest first (by `lastYear`).
+
+### Reconciliation knowledge records
+`knowledge/publications-table.md` and `knowledge/patents-table.md` are the
+human-readable master tables (included + excluded items, with reasons), reconciled
+against Scholar. Update them whenever publications/patents change, and re-record the
+"Last reconciled" date. **As of 2026-06-30, the patent list uses the family-representative
+rule with span + count (8 family rows published; full inventory of 27 US grants + 1 AU
+grouped by family in `knowledge/patents-table.md`).**
 
 ### "I changed jobs" / "I got promoted"
 1. In `experience.json`: set the previous current role's `"end"` to the end month
