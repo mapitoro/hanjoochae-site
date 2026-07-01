@@ -1,12 +1,13 @@
 [
   {
-    "title": "Vita Embryo — AI Embryo Assessment",
+    "title": "AI Embryo Assessment",
     "org": "Kai Health",
     "year": "2023–2024",
     "category": "Medical AI",
     "featured": true,
     "image": "assets/img/kai.jpg",
-    "blurb": "Led AI diagnostic R&D for embryo assessment (Vita Embryo) to MFDS (Korean FDA) clinical-trial approval, and rebuilt the product lifecycle to cut release cycles from ~2 months to 2–3 weeks.",
+    "fit": "contain",
+    "blurb": "Led AI diagnostic R&D for embryo assessment to MFDS (Korean FDA) clinical-trial approval, and rebuilt the product lifecycle to cut release cycles from ~2 months to 2–3 weeks.",
     "tags": ["Diagnostics", "Regulatory", "MLOps"]
   },
   {

@@ -173,7 +173,7 @@ const featuredHtml = featured.map(renderCase).join("");
 const ventures = projects.filter((p) => p.featured);
 const roots = projects.filter((p) => !p.featured);
 const ventureCard = (p) => `<article class="vcard-h">
-    ${media(p.image, `${p.org} — product`, "m-card")}
+    ${media(p.image, `${p.org} — product`, "m-card", { fit: p.fit })}
     <div class="vcard-body">
       <div class="vcard-cat">${esc(p.category)}</div>
       <h3>${esc(p.title)}</h3>
@@ -276,8 +276,8 @@ p{color:var(--ink-2);margin:0 0 14px}
 /* media slots */
 .media{position:relative;overflow:hidden;border-radius:var(--radius);background:var(--bg-soft);border:1px solid var(--line)}
 .media img,.media iframe,.media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
-.media.fit-contain{aspect-ratio:auto;background:#fff;display:block;padding:12px 24px}
-.media.fit-contain img{position:static;width:100%;height:auto;display:block;object-fit:contain}
+.media.fit-contain{aspect-ratio:auto;background:#fff;display:flex;align-items:center;justify-content:center;padding:12px 20px}
+.media.fit-contain img{position:static;width:100%;height:auto;max-height:100%;display:block;object-fit:contain}
 .media.is-video video{background:#000}
 .m-wide{aspect-ratio:16/9}
 .m-card{aspect-ratio:16/10}
