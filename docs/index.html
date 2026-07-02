@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Noto+Serif+KR:wght@500;600&display=swap" rel="stylesheet" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Han Joo Chae","jobTitle":"CTO & Head of Global Business","worksFor":{"@type":"Organization","name":"Oncosoft"},"email":"mailto:hanjoo.chae@gmail.com","url":"https://hanjoochae.com","sameAs":["https://www.linkedin.com/in/hanjoochae","https://scholar.google.com/citations?hl=en&user=GM3F4jsAAAAJ"],"description":"Medical AI leader with deep expertise bridging R&D with global commercialization across startups and enterprises. I build and scale AI organizations from zero, lead cross-functional teams across Korea and the US, and take products from rapid prototyping to regulated global launch (FDA/CE) — securing $1B+ in contracts and expanding across the US, Asia, the Middle East, and Latin America through partnerships with Google Cloud and AWS."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Han Joo Chae","jobTitle":"CTO & Head of Global Business","worksFor":{"@type":"Organization","name":"Oncosoft"},"url":"https://hanjoochae.com","sameAs":["https://www.linkedin.com/in/hanjoochae","https://scholar.google.com/citations?hl=en&user=GM3F4jsAAAAJ"],"description":"Medical AI leader with deep expertise bridging R&D with global commercialization across startups and enterprises. I build and scale AI organizations from zero, lead cross-functional teams across Korea and the US, and take products from rapid prototyping to regulated global launch (FDA/CE) — securing $1B+ in contracts and expanding across the US, Asia, the Middle East, and Latin America through partnerships with Google Cloud and AWS."}</script>
 <style>
 :root{
   --ink:#0b1623; --ink-2:#33445a; --muted:#64748b; --line:#e6eaf0;
@@ -259,7 +259,7 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
   
   <a class="btn btn-primary" href="https://www.linkedin.com/in/hanjoochae" target="_blank" rel="noopener">LinkedIn</a>
   <a class="btn" href="https://scholar.google.com/citations?hl=en&amp;user=GM3F4jsAAAAJ" target="_blank" rel="noopener">Scholar</a>
-  <a class="btn" href="mailto:hanjoo.chae@gmail.com">Email</a></div>
+  <a class="btn" data-email href="#">Email</a></div>
       <div class="stats"><div class="stat"><div class="stat-value">$1B+</div><div class="stat-label">Long-term contracts secured</div></div><div class="stat"><div class="stat-value">FDA / CE</div><div class="stat-label">Regulatory clearances achieved</div></div><div class="stat"><div class="stat-value">25%</div><div class="stat-label">Domestic market share (Oncosoft)</div></div><div class="stat"><div class="stat-value">15+</div><div class="stat-label">Granted US patents</div></div></div>
     </div>
     <div class="hero-portrait"><div class="media m-portrait"><img src="assets/img/profile.jpg" alt="Professional portrait" loading="lazy" /></div></div>
@@ -446,9 +446,9 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
   <div class="wrap">
     <div class="contact-card">
       <h2>Contact</h2>
-      <div class="big">hanjoo.chae@gmail.com</div>
+      <div class="big" data-email-text>Email me</div>
       <div class="btns" style="justify-content:center;margin-bottom:0">
-        <a class="btn btn-primary" href="mailto:hanjoo.chae@gmail.com">Email me</a>
+        <a class="btn btn-primary" data-email href="#">Email me</a>
         <a class="btn" href="https://www.linkedin.com/in/hanjoochae" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://scholar.google.com/citations?hl=en&amp;user=GM3F4jsAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
       </div>
@@ -457,6 +457,12 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
 </section>
 
 <footer><div class="wrap">© <span id="yr"></span> Han Joo Chae · Seoul, Korea</div></footer>
-<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+<script>
+document.getElementById("yr").textContent=new Date().getFullYear();
+(function(){try{var e=atob("aGFuam9vLmNoYWVAZ21haWwuY29t");
+document.querySelectorAll("[data-email]").forEach(function(a){a.setAttribute("href","mailto:"+e);});
+document.querySelectorAll("[data-email-text]").forEach(function(el){el.textContent=e;});
+}catch(_){}})();
+</script>
 </body>
 </html>

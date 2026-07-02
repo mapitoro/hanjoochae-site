@@ -106,7 +106,7 @@ const heroLinks = `
   ${profile.cv ? `<a class="btn btn-primary" href="${esc(profile.cv)}">Download CV</a>` : ""}
   <a class="btn${profile.cv ? "" : " btn-primary"}" href="${esc(profile.links.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>
   <a class="btn" href="${esc(profile.links.scholar)}" target="_blank" rel="noopener">Scholar</a>
-  <a class="btn" href="mailto:${esc(profile.email)}">Email</a>`;
+  <a class="btn" data-email href="#">Email</a>`;
 
 const stats = profile.highlights
   .map((h) => `<div class="stat"><div class="stat-value">${esc(h.value)}</div><div class="stat-label">${esc(h.label)}</div></div>`)
@@ -233,9 +233,12 @@ const pressHtml = press
 const jsonLd = {
   "@context": "https://schema.org", "@type": "Person", name: profile.name,
   jobTitle: profile.title, worksFor: { "@type": "Organization", name: profile.company },
-  email: `mailto:${profile.email}`, url: profile.links.website,
+  url: profile.links.website,
   sameAs: [profile.links.linkedin, profile.links.scholar], description: profile.summary,
 };
+// email is not written as plaintext anywhere in the HTML (anti-harvesting); it is
+// base64-encoded and assembled by JS at runtime into mailto links / text.
+const emailB64 = Buffer.from(profile.email, "utf8").toString("base64");
 
 // ---------- page ----------
 const html = `<!DOCTYPE html>
@@ -570,9 +573,9 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
   <div class="wrap">
     <div class="contact-card">
       <h2>Contact</h2>
-      <div class="big">${esc(profile.email)}</div>
+      <div class="big" data-email-text>Email me</div>
       <div class="btns" style="justify-content:center;margin-bottom:0">
-        <a class="btn btn-primary" href="mailto:${esc(profile.email)}">Email me</a>
+        <a class="btn btn-primary" data-email href="#">Email me</a>
         <a class="btn" href="${esc(profile.links.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="${esc(profile.links.scholar)}" target="_blank" rel="noopener">Google Scholar</a>
       </div>
@@ -581,7 +584,13 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
 </section>
 
 <footer><div class="wrap">© <span id="yr"></span> ${esc(profile.name)} · ${esc(profile.location)}</div></footer>
-<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+<script>
+document.getElementById("yr").textContent=new Date().getFullYear();
+(function(){try{var e=atob("${emailB64}");
+document.querySelectorAll("[data-email]").forEach(function(a){a.setAttribute("href","mailto:"+e);});
+document.querySelectorAll("[data-email-text]").forEach(function(el){el.textContent=e;});
+}catch(_){}})();
+</script>
 </body>
 </html>`;
 
