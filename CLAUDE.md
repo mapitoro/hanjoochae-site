@@ -3,6 +3,54 @@
 This is Han Joo Chae's personal/professional website (https://hanjoochae.com).
 Claude maintains it. This file tells you how. **Read it fully before editing.**
 
+## Purpose
+
+Present Han Joo Chae as a **medical-AI executive** (CTO & Head of Global Business,
+Oncosoft) — leading with leadership, commercial impact, and regulated global product
+launches, with research credentials (publications, patents, teaching) in a supporting
+role. The site replaced an old Weebly site (export archived locally) with a fast,
+dependency-free static single page that Claude can maintain through simple JSON edits.
+
+## Current status (as of 2026-07-16)
+
+- **Live** at https://hanjoochae.com — GitHub Pages serving `docs/` on `main`;
+  GoatCounter analytics active (`profile.json` → `analytics.goatcounter`).
+- Working tree clean; everything committed and pushed. Last change: GoatCounter
+  analytics (2026-07-06).
+- All 12 content JSON files populated; every image/video slot has a real asset in
+  `docs/assets/img/` (no placeholders showing).
+- Publications & patents last reconciled against Google Scholar **2026-06-30**
+  (publications needed no additions; patents show 8 family rows covering 27 US
+  grants + 1 AU — see `knowledge/*.md`).
+- Steady maintenance mode: no blocking work; apply "Standard update procedures"
+  below as new items arrive.
+
+## Decision log
+
+| Date | Decision |
+|------|----------|
+| 2026-06-30 | **Architecture:** JSON content (`content/`) + dependency-free Node generator (`build/build.mjs`) → `docs/index.html`, served by GitHub Pages from `/docs` on `main`. Content and design strictly separated; `docs/` never hand-edited. Migrated off Weebly (export kept as gitignored local zip). |
+| 2026-06-30 | **Positioning:** medical-AI executive, not "researcher." Concise, factual, metric-driven copy; English primary. Research shown understated (compact "Research roots" text, no visuals). |
+| 2026-06-30 | **Privacy:** CV not published (master in `orig_sources/`, sent on request). No personal mobile number. `orig_sources/` and Weebly archive gitignored. |
+| 2026-06-30 | **Publications rule:** full conference/journal papers only — no preprints, abstracts, posters, demos. |
+| 2026-06-30 | **Patents rule:** granted patents only, displayed **family-representative** — one row per invention family, anchored on the earliest grant, annotated with grant year range + count (8 rows for 27 US grants + 1 AU). Resolves the earlier "14 extra Samsung grants" question: they are folded into existing family rows, not listed separately. `knowledge/patents-table.md` holds the full inventory; `profile.json`'s "15+ Granted US patents" highlight kept intentionally conservative. |
+| 2026-06-30 | `perspectives.json` / `news.json` sections **removed** — recreate (content + build section) only if that content is revived. |
+| 2026-07-01 | Kai Health card: generalized title (product name dropped); product mockup shown uncropped (`contain` fit). |
+| 2026-07-02 | Contact email obfuscated (base64 + JS) so scrapers can't harvest plaintext from source. |
+| 2026-07-06 | Added GoatCounter privacy-friendly analytics, config-driven via `profile.json`. |
+
+## Next steps / open items
+
+- **Ongoing:** on new papers / patents / talks / press / job changes, follow the
+  "Standard update procedures" below; re-reconcile against Scholar periodically and
+  update the "Last reconciled" dates in `knowledge/*.md` (last: 2026-06-30).
+- **Deferred (decide later):**
+  - Whether to surface the Australian grant `AU2016235039B2` as a 9th patent row or a
+    note (currently folded into family 3 under the family-representative rule).
+  - Whether the "15+ Granted US patents" highlight should be raised (e.g. "25+") now
+    that 27 US grants are verified — currently kept conservative on purpose.
+  - Reviving `news.json` / `perspectives.json` if that content returns.
+
 ## Core principle: content and design are separate
 
 - **Content lives in `content/*.json`** — this is the single source of truth.
@@ -19,6 +67,7 @@ To change *how it looks* → edit `build/build.mjs`.
 content/      JSON content (source of truth) — edit here
 build/        build.mjs generator
 docs/         BUILD OUTPUT, served by GitHub Pages (/docs on main) — never hand-edit
+knowledge/    master reference tables (publications & patents, incl. excluded items) reconciled vs Scholar
 orig_sources/ local-only master media (image/video originals + CV master) + INVENTORY.md; gitignored
 archive-weebly-*.zip   compressed old Weebly export; gitignored (local backup)
 COWORK-PROJECT-INSTRUCTIONS.md   paste-once text for the Cowork project field
@@ -82,18 +131,24 @@ Image fields in the JSON point at files under `docs/assets/img/`. **If the file 
 missing, the build renders a labeled placeholder** (no broken images) — so the layout
 always looks intentional. Drop the real file at the path and rebuild to swap it in.
 
-| Slot (path) | Where it appears | Suggested |
-|-------------|------------------|-----------|
-| `assets/img/profile.jpg` | Hero portrait | Clean headshot, ~4:5 |
-| `assets/img/oncosoft-pipeline.jpg` | Oncosoft case hero | Wide 16:9 platform/workflow graphic |
-| `assets/img/oncosoft-studio.jpg` | Oncosoft gallery | OncoStudio product screenshot |
-| `assets/img/oncosoft-booth.jpg` | Oncosoft gallery | Conference booth / commercial presence |
-| `assets/img/rokit-hero.jpg` | ROKIT case hero | Wide 16:9 — tablet wound-capture shot |
-| `assets/img/rokit-modeling.jpg` | ROKIT gallery | Wound scan + 3D model |
-| `assets/img/rokit-patch.jpg` | ROKIT gallery | 3D-printed patch |
-| `assets/img/rokit-application.jpg` | ROKIT gallery | Patch application in OR |
-| `assets/img/kai.jpg` | Kai Health venture card | Vita Embryo product UI, ~16:10 |
-| `assets/img/speaking.jpg` | Speaking section | 16:9 stage photo (or set `profile.speakingVideo` to a YouTube URL) |
+The build resolves image slots **by basename, extension-agnostic**: a JSON value of
+`assets/img/kai.jpg` will find `kai.webp`/`kai.png` etc. on disk. Current slots (all
+filled with real assets):
+
+| Slot (JSON path) | On disk | Where it appears |
+|------------------|---------|------------------|
+| `assets/img/profile.jpg` | `profile.jpg` | Hero portrait (~4:5 headshot) |
+| `assets/img/oncosoft-pipeline.jpg` | `oncosoft-pipeline.png` | Oncosoft case hero (diagram; `heroFit: "contain"`) |
+| `assets/img/oncosoft-viewer.mp4` | `oncosoft-viewer.mp4` | Oncosoft `demoVideo` (autoplay loop; superseded the `oncosoft-studio.png` screenshot) |
+| `assets/img/oncosoft-booth.jpg` | `oncosoft-booth.jpg` | Oncosoft gallery — conference booth |
+| `assets/img/aapm-award.jpg` | `aapm-award.jpg` | Oncosoft gallery — KSMP-JSMP-KAMPiNA award at AAPM 2025 |
+| `assets/img/oncosoft-group.jpg` | `oncosoft-group.jpg` | Oncosoft gallery — team on-site |
+| `assets/img/rokit-hero.jpg` | `rokit-hero.jpg` | ROKIT case hero — tablet wound capture |
+| `assets/img/rokit-modeling.jpg` | `rokit-modeling.jpg` | ROKIT gallery — wound scan + 3D model |
+| `assets/img/rokit-patch.jpg` | `rokit-patch.jpg` | ROKIT gallery — 3D-printed patch |
+| `assets/img/rokit-application.jpg` | `rokit-application.jpg` | ROKIT gallery — patch application in OR |
+| `assets/img/kai.jpg` | `kai.webp` | Kai Health venture card (~16:10 product UI) |
+| `assets/img/speaking.jpg` | `speaking.jpg` | Speaking section (16:9 stage photo; or set `profile.speakingVideo` to a YouTube URL) |
 
 Keep images web-sized (long edge ≤ ~1600px). Any YouTube URL in a `*Video` field is
 auto-embedded; otherwise the matching image/placeholder is used.
