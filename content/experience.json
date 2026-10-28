@@ -1,14 +1,38 @@
 [
   {
     "company": "Oncosoft",
-    "role": "CTO & Head of Global Business",
+    "role": "Chief Business and Technology Officer",
     "location": "Seoul, Korea",
     "start": "2024-11",
     "end": "present",
     "current": true,
-    "bullets": [
-      "Lead 20+ staff across R&D and global sales in Seoul and the US, driving AI-powered radiation therapy solutions that captured 25% domestic market share and ranked #1 in clinical performance benchmarks by leading Japanese research institutions.",
-      "Spearhead international expansion across the US, Latin America, Southeast Asia, and the Middle East, securing 10+ distribution partnerships and targeting 100% year-over-year revenue growth."
+    "roles": [
+      {
+        "title": "Chief Business and Technology Officer",
+        "start": "2026-09",
+        "end": "present",
+        "current": true,
+        "bullets": [
+          "Lead the Global Business Division (Business Development, Programs & IP, Business Strategy), owning international expansion, channel and industry partnerships, government R&D programs, and IP strategy.",
+          "Pair business development with clinical AI deployment engineers who support hospital adoption on site."
+        ]
+      },
+      {
+        "title": "CTO & Head of Global Business",
+        "start": "2025-09",
+        "end": "2026-08",
+        "bullets": [
+          "Led 20+ staff across R&D and global sales in Seoul and the US, securing Oncosoft's first commercial customers in the US and Japan and new clearances in Singapore and Brazil."
+        ]
+      },
+      {
+        "title": "CTO",
+        "start": "2024-11",
+        "end": "2025-08",
+        "bullets": [
+          "Led R&D through OncoStudio's FDA 510(k) clearance and Japanese certification, and supported a solution supply agreement with Mayo Clinic Florida, Oncosoft's first US revenue."
+        ]
+      }
     ]
   },
   {

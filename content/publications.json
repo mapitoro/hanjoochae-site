@@ -1,5 +1,13 @@
 [
   {
+    "authors": "Yoon Jo Kim, Wonyoung Cho, Jongmin Lee, Han Joo Chae, Hyunki Park, Sang Hoon Seo, Jae Myung Noh, Kyungmi Yang, Dongryul Oh, and Jin Sung Kim",
+    "year": 2026,
+    "title": "A Guideline-Aware AI Agent for Zero-Shot Target Volume Auto-Delineation",
+    "venue": "Medical Image Computing and Computer Assisted Intervention (MICCAI '26)",
+    "type": "Conference",
+    "link": "https://papers.miccai.org/miccai-2026/paper/5049_paper.pdf"
+  },
+  {
     "authors": "Seunghwan Lee, Gwanmo Park, Hyewon Son, Jiwon Ryu, and Han Joo Chae",
     "year": 2024,
     "title": "InFusionSurf: Refining Neural RGB-D Surface Reconstruction Using Per-Frame Intrinsic Refinement and TSDF Fusion Prior Learning",

@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Han Joo Chae — CTO &amp; Head of Global Business, Oncosoft</title>
-<meta name="description" content="Medical AI leader with deep expertise bridging R&amp;D with global commercialization across startups and enterprises. I build and scale AI organizations from z" />
+<title>Han Joo Chae — Chief Business and Technology Officer, Oncosoft</title>
+<meta name="description" content="Medical AI executive leading global business at Oncosoft, where I head the Global Business Division and drive expansion of AI radiation-oncology software a" />
 <meta name="author" content="Han Joo Chae" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Han Joo Chae — CTO &amp; Head of Global Business" />
-<meta property="og:description" content="Medical AI leader bridging R&amp;D and global commercialization." />
+<meta property="og:title" content="Han Joo Chae — Chief Business and Technology Officer" />
+<meta property="og:description" content="Medical AI executive taking regulated AI products to global markets." />
 <meta property="og:url" content="https://hanjoochae.com" />
 <meta name="twitter:card" content="summary" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Noto+Serif+KR:wght@500;600&display=swap" rel="stylesheet" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Han Joo Chae","jobTitle":"CTO & Head of Global Business","worksFor":{"@type":"Organization","name":"Oncosoft"},"url":"https://hanjoochae.com","sameAs":["https://www.linkedin.com/in/hanjoochae","https://scholar.google.com/citations?hl=en&user=GM3F4jsAAAAJ"],"description":"Medical AI leader with deep expertise bridging R&D with global commercialization across startups and enterprises. I build and scale AI organizations from zero, lead cross-functional teams across Korea and the US, and take products from rapid prototyping to regulated global launch (FDA/CE) — securing $1B+ in contracts and expanding across the US, Asia, the Middle East, and Latin America through partnerships with Google Cloud and AWS."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Han Joo Chae","jobTitle":"Chief Business and Technology Officer","worksFor":{"@type":"Organization","name":"Oncosoft"},"url":"https://hanjoochae.com","sameAs":["https://www.linkedin.com/in/hanjoochae","https://scholar.google.com/citations?hl=en&user=GM3F4jsAAAAJ"],"description":"Medical AI executive leading global business at Oncosoft, where I head the Global Business Division and drive expansion of AI radiation-oncology software across the US, Japan, Southeast Asia, and Latin America. I come from the technical side: I have built AI organizations from zero and taken products from prototype to regulated launch (FDA, CE, MFDS). At ROKIT Healthcare, I drove the commercial cycle from MVP to $1B+ in long-term contracts across the US, India, Turkey, the Middle East, and Latin America."}</script>
 <script data-goatcounter="https://hanjoochae.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
 :root{
@@ -78,7 +78,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);bac
 
 /* proof band */
 .proof{display:flex;flex-direction:column;gap:16px}
-.proof-group{display:grid;grid-template-columns:118px 1fr;align-items:start;gap:14px}
+.proof-group{display:grid;grid-template-columns:150px 1fr;align-items:start;gap:14px}
 .proof-k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:8px}
 .wm-list{display:flex;flex-wrap:wrap;gap:8px;min-width:0}
 .wm{font-family:"Newsreader",serif;font-size:16px;font-weight:600;color:var(--ink);background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:5px 12px}
@@ -112,6 +112,20 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);bac
 .fgallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-bottom:26px}
 .fgallery figure{margin:0}
 .fgallery figcaption{font-size:12.5px;color:var(--muted);margin-top:8px}
+/* gallery lightbox (click to enlarge) */
+.fgallery .media img{cursor:zoom-in;transition:transform .25s}
+.fgallery .media:hover img{transform:scale(1.02)}
+.fgallery .media:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(1200px,94vw);width:auto;overflow:visible}
+dialog.lb::backdrop{background:rgba(8,14,22,.86)}
+.lb-fig{margin:0;display:flex;flex-direction:column;align-items:center}
+.lb-fig img{display:block;max-width:min(1200px,94vw);max-height:80vh;width:auto;height:auto;border-radius:10px;background:#111}
+.lb-fig figcaption{color:#e6edf3;font-size:14px;margin-top:12px;text-align:center;max-width:760px;padding:0 12px}
+.lb-count{color:#9fb0c0;font-size:12px;margin-top:4px}
+.lb-btn{position:fixed;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;font-size:22px;line-height:1;cursor:pointer}
+.lb-btn:hover{background:rgba(255,255,255,.25)}
+.lb-prev{left:16px}.lb-next{right:16px}
+.lb-close{position:fixed;top:16px;right:16px;transform:none}
 .f-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
 .f-partners{display:flex;gap:8px;flex-wrap:wrap}
 .f-links{display:flex;gap:10px;flex-wrap:wrap}
@@ -149,6 +163,13 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);bac
 .exp-org span{color:var(--muted);font-weight:400}
 .exp-item ul{margin:8px 0 0;padding-left:18px}
 .exp-item li{color:var(--ink-2);margin-bottom:6px}
+.exp-roles{margin-top:10px}
+.exp-role{position:relative;padding:12px 0 4px 18px;border-left:2px solid var(--line);margin-left:2px}
+.exp-role::before{content:"";position:absolute;left:-5px;top:20px;width:8px;height:8px;border-radius:50%;background:#fff;border:2px solid var(--line)}
+.exp-role.current::before{background:var(--accent);border-color:var(--accent)}
+.exp-role-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.exp-role-title{font-weight:600;font-size:15.5px;color:var(--accent-deep)}
+.exp-role ul{margin-top:6px}
 
 /* speaking */
 .speak-media{max-width:760px;margin:0 0 8px}
@@ -252,16 +273,16 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">CTO &amp; Head of Global Business · Oncosoft</div>
+      <div class="eyebrow">Chief Business and Technology Officer · Oncosoft</div>
       <h1>Han Joo Chae</h1>
       <div class="name-ko">채한주</div>
-      <p class="pov">Medical AI only earns its place when it clears the regulators and reaches patients at global scale. I build the teams, products, and go-to-market that get it there.</p>
+      <p class="pov">Medical AI matters only when it clears regulatory review, earns clinicians' trust, and reaches patients worldwide. As a technologist turned business leader, I build the partnerships, channels, and teams that take it there.</p>
       <div class="btns">
   
   <a class="btn btn-primary" href="https://www.linkedin.com/in/hanjoochae" target="_blank" rel="noopener">LinkedIn</a>
   <a class="btn" href="https://scholar.google.com/citations?hl=en&amp;user=GM3F4jsAAAAJ" target="_blank" rel="noopener">Scholar</a>
   <a class="btn" data-email href="#">Email</a></div>
-      <div class="stats"><div class="stat"><div class="stat-value">$1B+</div><div class="stat-label">Long-term contracts secured</div></div><div class="stat"><div class="stat-value">FDA / CE</div><div class="stat-label">Regulatory clearances achieved</div></div><div class="stat"><div class="stat-value">25%</div><div class="stat-label">Domestic market share (Oncosoft)</div></div><div class="stat"><div class="stat-value">15+</div><div class="stat-label">Granted US patents</div></div></div>
+      <div class="stats"><div class="stat"><div class="stat-value">$1B+</div><div class="stat-label">Long-term contracts secured</div></div><div class="stat"><div class="stat-value">7 countries</div><div class="stat-label">Markets cleared or entered (Oncosoft)</div></div><div class="stat"><div class="stat-value">20+</div><div class="stat-label">Hospitals in Korea (Oncosoft)</div></div><div class="stat"><div class="stat-value">FDA / CE</div><div class="stat-label">Regulated launches led</div></div></div>
     </div>
     <div class="hero-portrait"><div class="media m-portrait"><img src="assets/img/profile.jpg" alt="Professional portrait" loading="lazy" /></div></div>
   </div>
@@ -270,8 +291,8 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
 <section id="proof" style="padding:36px 0">
   <div class="wrap">
   <div class="proof">
-    <div class="proof-group"><span class="proof-k">Partnered with</span><div class="wm-list"><span class="wm">Google Cloud</span><span class="wm">AWS</span></div></div>
-    <div class="proof-group"><span class="proof-k">Spoke at</span><div class="wm-list"><span class="wm">AAPM Int'l Symposium</span><span class="wm">Google Cloud Startup Summit</span><span class="wm">AWS Public Sector Summit</span><span class="wm">Naver</span><span class="wm">Samsung SSDC</span><span class="wm">KAIST</span></div></div>
+    <div class="proof-group"><span class="proof-k">Clinical &amp; research</span><div class="wm-list"><span class="wm">Mayo Clinic</span><span class="wm">UChicago Medicine</span><span class="wm">Yonsei Cancer Center</span><span class="wm">Samsung Medical Center</span></div></div><div class="proof-group"><span class="proof-k">Commercial</span><div class="wm-list"><span class="wm">GenXRT (US)</span><span class="wm">Anzai Medical (Japan)</span><span class="wm">OPUS (Chile)</span><span class="wm">AstraZeneca Korea</span></div></div>
+    <div class="proof-group"><span class="proof-k">Spoke at</span><div class="wm-list"><span class="wm">AAPM Int'l Symposium</span><span class="wm">SOCHIRA (Chile)</span><span class="wm">Google Cloud Startup Summit</span><span class="wm">AWS Public Sector Summit</span><span class="wm">Naver</span><span class="wm">Samsung SSDC</span><span class="wm">KAIST</span></div></div>
     <div class="proof-group"><span class="proof-k">Featured in</span><div class="wm-list"><span class="wm">Google Cloud Customers</span><span class="wm">Chosun Biz</span></div></div>
   </div></div>
 </section>
@@ -280,7 +301,7 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
   <div class="wrap">
     <h2>About</h2>
     <div class="about-grid">
-      <div><p class="about-lead">Medical AI leader with deep expertise bridging R&amp;D with global commercialization across startups and enterprises. I build and scale AI organizations from zero, lead cross-functional teams across Korea and the US, and take products from rapid prototyping to regulated global launch (FDA/CE) — securing $1B+ in contracts and expanding across the US, Asia, the Middle East, and Latin America through partnerships with Google Cloud and AWS.</p><div class="chips"><span class="chip">Medical AI</span><span class="chip">Human-AI Interaction</span><span class="chip">Human-Computer Interaction</span><span class="chip">Computer Vision</span><span class="chip">Machine Learning</span><span class="chip">Augmented / Mixed Reality</span><span class="chip">Global Go-to-Market</span><span class="chip">Regulatory (FDA/CE/MFDS)</span><span class="chip">MLOps</span></div></div>
+      <div><p class="about-lead">Medical AI executive leading global business at Oncosoft, where I head the Global Business Division and drive expansion of AI radiation-oncology software across the US, Japan, Southeast Asia, and Latin America. I come from the technical side: I have built AI organizations from zero and taken products from prototype to regulated launch (FDA, CE, MFDS). At ROKIT Healthcare, I drove the commercial cycle from MVP to $1B+ in long-term contracts across the US, India, Turkey, the Middle East, and Latin America.</p><div class="chips"><span class="chip">Global Business Development</span><span class="chip">Global Go-to-Market</span><span class="chip">Strategic Partnerships</span><span class="chip">Regulatory (FDA/CE/MFDS)</span><span class="chip">Medical AI</span><span class="chip">AI Agents in Radiation Oncology</span><span class="chip">Computer Vision</span><span class="chip">Machine Learning</span><span class="chip">Human-Computer Interaction</span></div></div>
       <div><div class="side-label">Education</div><div class="edu-item">
       <div class="edu-school">Seoul National University</div>
       <div class="edu-degree">Ph.D., Computer Science and Engineering</div>
@@ -302,17 +323,17 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
     <div class="case case-current">
     <div class="f-head">
       <div class="f-label">Now · Current Role</div>
-      <h3 class="f-title">Bringing AI to Radiation Oncology</h3>
-      <div class="f-org">Oncosoft · CTO &amp; Head of Global Business · 2024–present</div>
-      <p class="f-lead">As CTO and Head of Global Business, I lead the technology and global expansion of Oncosoft — an end-to-end AI software ecosystem bringing precision and efficiency to radiation oncology.</p>
+      <h3 class="f-title">Taking AI Radiation Oncology Global</h3>
+      <div class="f-org">Oncosoft · Chief Business and Technology Officer · 2024–present</div>
+      <p class="f-lead">As Chief Business and Technology Officer, I lead Oncosoft's Global Business Division, taking an end-to-end AI platform for radiation oncology from regulatory clearance to clinical adoption across the US, Japan, Southeast Asia, and Latin America.</p>
     </div>
     <div class="media m-wide fit-contain"><img src="assets/img/oncosoft-pipeline.png" alt="Oncosoft — overview" loading="lazy" /></div>
-    <div class="fmetrics"><div class="fmetric"><div class="fmetric-v">25%</div><div class="fmetric-l">Domestic market share</div></div><div class="fmetric"><div class="fmetric-v">#1</div><div class="fmetric-l">Japan clinical benchmark</div></div><div class="fmetric"><div class="fmetric-v">300K+</div><div class="fmetric-l">Patient cases processed</div></div><div class="fmetric"><div class="fmetric-v">~1 min</div><div class="fmetric-l">Organ auto-contouring</div></div></div>
-    <div class="certs"><span class="certs-k">Regulatory clearances</span><div class="cert-chips"><span class="cert">Korea (MFDS)<b>2022.02</b></span><span class="cert">US (FDA)<b>2025.02</b></span><span class="cert">Japan<b>2025.04</b></span><span class="cert">Singapore<b>2025.10</b></span><span class="cert">Brazil<b>2025.12</b></span></div></div>
-    <div class="fblocks"><div class="fblock"><div class="fblock-k">Problem</div><p>Radiation therapy planning depends on manual organ and tumor contouring on CT/MR — slow, variable between clinicians, and a bottleneck to treating more patients.</p></div><div class="fblock"><div class="fblock-k">Approach</div><p>OncoStudio auto-contours organs-at-risk and tumors in about a minute through a zero-click workflow integrated with PACS, TPS, and EMR. It anchors a full platform — OncoFlow, OncoStudio, OncoPlan, and OncoRPT — spanning imaging, planning, delivery, and follow-up.</p></div><div class="fblock"><div class="fblock-k">Impact</div><p>Captured 25% domestic market share and ranked #1 in clinical performance benchmarks by leading Japanese research institutions, with 300,000+ patient cases processed. I lead R&amp;D and global expansion across the US, Latin America, Southeast Asia, and the Middle East.</p></div></div>
+    <div class="fmetrics"><div class="fmetric"><div class="fmetric-v">6 countries</div><div class="fmetric-l">Regulatory clearances</div></div><div class="fmetric"><div class="fmetric-v">20+</div><div class="fmetric-l">Hospitals in Korea</div></div><div class="fmetric"><div class="fmetric-v">1st</div><div class="fmetric-l">Korean-developed carbon-ion TPS</div></div><div class="fmetric"><div class="fmetric-v">~1 min</div><div class="fmetric-l">Major-organ auto-contouring</div></div></div>
+    <div class="certs"><span class="certs-k">Regulatory clearances</span><div class="cert-chips"><span class="cert">Korea (MFDS)<b>2022.02</b></span><span class="cert">US (FDA)<b>2025.02</b></span><span class="cert">Japan<b>2025.04</b></span><span class="cert">Singapore<b>2025.10</b></span><span class="cert">Brazil<b>2025.12</b></span><span class="cert">OncoPlan · Korea (MFDS)<b>2026.08</b></span><span class="cert">Indonesia<b>2026.10</b></span></div></div>
+    <div class="fblocks"><div class="fblock"><div class="fblock-k">Problem</div><p>Radiation therapy planning still depends on manual contouring of organs and tumors: slow, variable between clinicians, and a bottleneck to treating more patients. For AI to fix that worldwide, it has to clear each market's regulators and reach clinics through channels they already trust.</p></div><div class="fblock"><div class="fblock-k">Approach</div><p>OncoStudio auto-contours organs-at-risk and tumors, major organs in about a minute, inside existing PACS, TPS, and EMR workflows. It anchors a platform with OncoFlow (workflow), OncoPlan (particle-therapy planning), and OncoAgent, a guideline-aware AI agent published at MICCAI 2026. My division turns that platform into market access: country-by-country regulatory entry, distribution and industry partnerships, government R&amp;D programs and IP, and clinical AI deployment engineers who support adoption on site.</p></div><div class="fblock"><div class="fblock-k">Impact</div><p>Cleared in six countries (Korea, US FDA 510(k), Japan, Singapore, Brazil, Indonesia), distributed in Chile through exclusive distributor OPUS, and used in 20+ hospitals in Korea. Mayo Clinic Florida is a customer under a 2025 solution supply agreement and a clinical validation partner; GenXRT is our first US commercial partner; Anzai Medical is the exclusive distributor in Japan. In particle therapy, OncoPlan was cleared by the MFDS in 2026 as the first carbon-ion treatment planning system developed by a Korean company, with Yonsei Cancer Center as technology transfer and joint R&amp;D partner for carbon-ion planning and Samsung Medical Center as joint R&amp;D partner for proton therapy validation.</p></div></div>
     <div class="case-video"><div class="side-label">OncoStudio — AI auto-contouring of organs and tumors on CT/MR</div><div class="media m-wide is-video"><video autoplay muted loop preload="auto" playsinline><source src="assets/img/oncosoft-viewer.mp4" type="video/mp4" /></video></div></div>
-    <div class="fgallery"><figure><div class="media m-tile"><img src="assets/img/oncosoft-booth.jpg" alt="Meeting clinicians and partners at a global oncology conference" loading="lazy" /></div><figcaption>Meeting clinicians and partners at a global oncology conference</figcaption></figure><figure><div class="media m-tile"><img src="assets/img/aapm-award.jpg" alt="Receiving the International Symposium Award — 5th KSMP-JSMP-KAMPiNA Joint Symposium at AAPM, 2025" loading="lazy" /></div><figcaption>Receiving the International Symposium Award — 5th KSMP-JSMP-KAMPiNA Joint Symposium at AAPM, 2025</figcaption></figure><figure><div class="media m-tile"><img src="assets/img/oncosoft-group.jpg" alt="With the Oncosoft team on-site" loading="lazy" /></div><figcaption>With the Oncosoft team on-site</figcaption></figure></div>
-    <div class="f-foot"><div></div><div class="f-links"><a class="btn btn-sm" href="https://oncosoft.io" target="_blank" rel="noopener">Oncosoft ↗</a></div></div>
+    <div class="fgallery"><figure><div class="media m-tile"><img src="assets/img/aapm2026-demo.jpg" alt="Demonstrating OncoStudio to visiting clinicians at the Oncosoft booth, AAPM 2026" loading="lazy" /></div><figcaption>Demonstrating OncoStudio to visiting clinicians at the Oncosoft booth, AAPM 2026</figcaption></figure><figure><div class="media m-tile"><img src="assets/img/oncosoft-booth.jpg" alt="Meeting clinicians and partners at a global oncology conference" loading="lazy" /></div><figcaption>Meeting clinicians and partners at a global oncology conference</figcaption></figure><figure><div class="media m-tile"><img src="assets/img/aapm-award.jpg" alt="Receiving the International Symposium Award — 5th KSMP-JSMP-KAMPiNA Joint Symposium at AAPM, 2025" loading="lazy" /></div><figcaption>Receiving the International Symposium Award — 5th KSMP-JSMP-KAMPiNA Joint Symposium at AAPM, 2025</figcaption></figure><figure><div class="media m-tile"><img src="assets/img/oncosoft-group.jpg" alt="With the Oncosoft team on-site" loading="lazy" /></div><figcaption>With the Oncosoft team on-site</figcaption></figure></div>
+    <div class="f-foot"><div class="f-partners"><span class="wm">Mayo Clinic Florida</span><span class="wm">UChicago Medicine</span><span class="wm">Yonsei Cancer Center</span><span class="wm">Samsung Medical Center</span><span class="wm">Gachon Gil Medical Center</span><span class="wm">Proton Therapy Singapore</span><span class="wm">GenXRT</span><span class="wm">Anzai Medical</span><span class="wm">OPUS (Chile)</span><span class="wm">AstraZeneca Korea</span><span class="wm">Paragon Care Korea</span><span class="wm">Terapet</span></div><div class="f-links"><a class="btn btn-sm" href="https://oncosoft.io" target="_blank" rel="noopener">Oncosoft ↗</a><a class="btn btn-sm" href="https://papers.miccai.org/miccai-2026/paper/5049_paper.pdf" target="_blank" rel="noopener">Paper — MICCAI 2026 ↗</a></div></div>
   </div><div class="case">
     <div class="f-head">
       <div class="f-label">Flagship Career Impact · 2020–2023</div>
@@ -349,10 +370,20 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
 </section>
 
 <section id="experience">
-  <div class="wrap"><h2>Experience</h2><div class="exp-item current">
-      <div class="exp-head"><h3>CTO &amp; Head of Global Business</h3><span class="exp-dates">Nov 2024 — Present</span></div>
-      <div class="exp-org">Oncosoft · <span>Seoul, Korea</span></div>
-      <ul><li>Lead 20+ staff across R&amp;D and global sales in Seoul and the US, driving AI-powered radiation therapy solutions that captured 25% domestic market share and ranked #1 in clinical performance benchmarks by leading Japanese research institutions.</li><li>Spearhead international expansion across the US, Latin America, Southeast Asia, and the Middle East, securing 10+ distribution partnerships and targeting 100% year-over-year revenue growth.</li></ul>
+  <div class="wrap"><h2>Experience</h2><div class="exp-item exp-multi current">
+      <div class="exp-head"><h3>Oncosoft</h3><span class="exp-dates">Nov 2024 — Present</span></div>
+      <div class="exp-org"><span>Seoul, Korea</span></div>
+      
+      <div class="exp-roles"><div class="exp-role current">
+          <div class="exp-role-head"><span class="exp-role-title">Chief Business and Technology Officer</span><span class="exp-dates">Sep 2026 — Present</span></div>
+          <ul><li>Lead the Global Business Division (Business Development, Programs &amp; IP, Business Strategy), owning international expansion, channel and industry partnerships, government R&amp;D programs, and IP strategy.</li><li>Pair business development with clinical AI deployment engineers who support hospital adoption on site.</li></ul>
+        </div><div class="exp-role">
+          <div class="exp-role-head"><span class="exp-role-title">CTO &amp; Head of Global Business</span><span class="exp-dates">Sep 2025 — Aug 2026</span></div>
+          <ul><li>Led 20+ staff across R&amp;D and global sales in Seoul and the US, securing Oncosoft's first commercial customers in the US and Japan and new clearances in Singapore and Brazil.</li></ul>
+        </div><div class="exp-role">
+          <div class="exp-role-head"><span class="exp-role-title">CTO</span><span class="exp-dates">Nov 2024 — Aug 2025</span></div>
+          <ul><li>Led R&amp;D through OncoStudio's FDA 510(k) clearance and Japanese certification, and supported a solution supply agreement with Mayo Clinic Florida, Oncosoft's first US revenue.</li></ul>
+        </div></div>
     </div><div class="exp-item">
       <div class="exp-head"><h3>CTO</h3><span class="exp-dates">Nov 2023 — Oct 2024</span></div>
       <div class="exp-org">Kai Health · <span>Seoul, Korea</span></div>
@@ -385,7 +416,7 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
     <h2>Speaking &amp; Teaching</h2>
     <div class="speak-media"><div class="media m-wide"><img src="assets/img/speaking.jpg" alt="Speaking on stage — conference photo" loading="lazy" /></div></div>
     <div class="side-label speak-sub">Invited talks</div>
-    <ul class="col-list cols"><li><span class="li-date">Jul 2025</span><span>AAPM International Joint Symposium (KSMP-JSMP-KAMPiNA)</span></li><li><span class="li-date">Mar 2025</span><span>NTMP Symposium — AI-Driven Radiation Oncology</span></li><li><span class="li-date">Feb 2024</span><span>National Information Society Agency (NIA) AI Trend Seminar</span></li><li><span class="li-date">May 2023</span><span>Google Cloud Startup Summit, APAC — Panel Discussion</span></li><li><span class="li-date">Apr 2023</span><span>Soongsil University Technical Information Seminar</span></li><li><span class="li-date">Dec 2022</span><span>Korea Software Industry Association (KOSA) Open Seminar</span></li><li><span class="li-date">Nov 2022</span><span>Samsung Software Developer Conference (SSDC)</span></li><li><span class="li-date">Nov 2022</span><span>Sungkyunkwan University Sustainable IT Technology Seminar</span></li><li><span class="li-date">Sep 2022</span><span>KAIST GSTC Colloquium</span></li><li><span class="li-date">Sep 2022</span><span>Soongsil University Technical Information Seminar</span></li><li><span class="li-date">Aug 2022</span><span>AWS Public Sector AI/ML Cloud Alliance (Asia Pacific &amp; Japan)</span></li><li><span class="li-date">Mar 2022</span><span>Naver Techtalk</span></li><li><span class="li-date">Jan 2022</span><span>Korea Institute of Machinery and Materials (KIMM) AI Seminar</span></li><li><span class="li-date">Jun 2021</span><span>ROKIT Open Innovation — Trends in AI Technology and Its Medical Applications</span></li><li><span class="li-date">May 2021</span><span>ROKIT Open Innovation — Emerging A.I. Technologies in Personalized Medicine</span></li></ul>
+    <ul class="col-list cols"><li><span class="li-date">Apr 2026</span><span>SOCHIRA (Chilean Society of Radiation Oncology) Seminar — Target Contouring with Large Language Models</span></li><li><span class="li-date">Jul 2025</span><span>AAPM International Joint Symposium (KSMP-JSMP-KAMPiNA)</span></li><li><span class="li-date">Mar 2025</span><span>NTMP Symposium — AI-Driven Radiation Oncology</span></li><li><span class="li-date">Feb 2024</span><span>National Information Society Agency (NIA) AI Trend Seminar</span></li><li><span class="li-date">May 2023</span><span>Google Cloud Startup Summit, APAC — Panel Discussion</span></li><li><span class="li-date">Apr 2023</span><span>Soongsil University Technical Information Seminar</span></li><li><span class="li-date">Dec 2022</span><span>Korea Software Industry Association (KOSA) Open Seminar</span></li><li><span class="li-date">Nov 2022</span><span>Samsung Software Developer Conference (SSDC)</span></li><li><span class="li-date">Nov 2022</span><span>Sungkyunkwan University Sustainable IT Technology Seminar</span></li><li><span class="li-date">Sep 2022</span><span>KAIST GSTC Colloquium</span></li><li><span class="li-date">Sep 2022</span><span>Soongsil University Technical Information Seminar</span></li><li><span class="li-date">Aug 2022</span><span>AWS Public Sector AI/ML Cloud Alliance (Asia Pacific &amp; Japan)</span></li><li><span class="li-date">Mar 2022</span><span>Naver Techtalk</span></li><li><span class="li-date">Jan 2022</span><span>Korea Institute of Machinery and Materials (KIMM) AI Seminar</span></li><li><span class="li-date">Jun 2021</span><span>ROKIT Open Innovation — Trends in AI Technology and Its Medical Applications</span></li><li><span class="li-date">May 2021</span><span>ROKIT Open Innovation — Emerging A.I. Technologies in Personalized Medicine</span></li></ul>
     <div class="side-label speak-sub">Teaching</div>
     <ul class="col-list cols"><li><span class="li-date">2021, 2022</span><span>AI-based Bioprinting Technology and Use Cases in the Medical Field <em>— Daegu Health College</em></span></li><li><span class="li-date">2021</span><span>AI Technology in Healthcare and Medical Industry <em>— Handong Global University</em></span></li><li><span class="li-date">2018</span><span>Scenario-Based UX Design <em>— Seoul National University</em></span></li><li><span class="li-date">2018</span><span>Chatbot Development Workshop <em>— Seoul National University</em></span></li><li><span class="li-date">2018</span><span>Simple User Experiment with Quantitative Usability Testing <em>— Seoul National University</em></span></li><li><span class="li-date">2017</span><span>Electronics Prototyping Using Arduino <em>— Seoul National University</em></span></li></ul>
   </div>
@@ -394,7 +425,10 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
 <section id="research">
   <div class="wrap">
     <h2>Research &amp; Patents</h2>
-    <ul class="pub-list"><li class="pub"><span class="pub-year">2024</span>
+    <ul class="pub-list"><li class="pub"><span class="pub-year">2026</span>
+      <div class="pub-body"><div class="pub-title"><a href="https://papers.miccai.org/miccai-2026/paper/5049_paper.pdf" target="_blank" rel="noopener">A Guideline-Aware AI Agent for Zero-Shot Target Volume Auto-Delineation</a></div>
+      <div class="pub-authors">Yoon Jo Kim, Wonyoung Cho, Jongmin Lee, Han Joo Chae, Hyunki Park, Sang Hoon Seo, Jae Myung Noh, Kyungmi Yang, Dongryul Oh, and Jin Sung Kim</div>
+      <div class="pub-venue">Medical Image Computing and Computer Assisted Intervention (MICCAI '26) <span class="pub-type">Conference</span></div></div></li><li class="pub"><span class="pub-year">2024</span>
       <div class="pub-body"><div class="pub-title"><a href="https://doi.org/10.1109/ICME57554.2024.10687901" target="_blank" rel="noopener">InFusionSurf: Refining Neural RGB-D Surface Reconstruction Using Per-Frame Intrinsic Refinement and TSDF Fusion Prior Learning</a></div>
       <div class="pub-authors">Seunghwan Lee, Gwanmo Park, Hyewon Son, Jiwon Ryu, and Han Joo Chae</div>
       <div class="pub-venue">IEEE International Conference on Multimedia and Expo (ICME '24) <span class="pub-type">Conference</span> <a class="pub-extra" href="https://rokit-healthcare.github.io/InFusionSurf/" target="_blank" rel="noopener">Project page ↗</a></div></div></li><li class="pub"><span class="pub-year">2023</span>
@@ -458,8 +492,37 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
 </section>
 
 <footer><div class="wrap">© <span id="yr"></span> Han Joo Chae · Seoul, Korea</div></footer>
+<dialog class="lb" id="lb" aria-label="Photo viewer">
+  <figure class="lb-fig"><img id="lb-img" alt="" /><figcaption id="lb-cap"></figcaption><div class="lb-count" id="lb-count"></div></figure>
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous photo">‹</button>
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Next photo">›</button>
+  <button class="lb-btn lb-close" id="lb-close" aria-label="Close">×</button>
+</dialog>
 <script>
 document.getElementById("yr").textContent=new Date().getFullYear();
+// gallery lightbox: click a gallery photo to view it uncropped; arrows / Esc / backdrop click
+(function(){
+  var dlg=document.getElementById("lb");
+  if(!dlg||typeof dlg.showModal!=="function")return;
+  var img=document.getElementById("lb-img"),cap=document.getElementById("lb-cap"),cnt=document.getElementById("lb-count");
+  var set=[],i=0;
+  function show(){var it=set[i];img.src=it.src;img.alt=it.alt;cap.textContent=it.cap;cnt.textContent=set.length>1?(i+1)+" / "+set.length:"";
+    document.getElementById("lb-prev").style.display=document.getElementById("lb-next").style.display=set.length>1?"":"none";}
+  function step(d){i=(i+d+set.length)%set.length;show();}
+  document.querySelectorAll(".fgallery").forEach(function(g){
+    var figs=[].slice.call(g.querySelectorAll("figure")).filter(function(f){return f.querySelector("img");});
+    var items=figs.map(function(f){var im=f.querySelector("img"),fc=f.querySelector("figcaption");return{src:im.currentSrc||im.src,alt:im.alt,cap:fc?fc.textContent:""};});
+    figs.forEach(function(f,k){var m=f.querySelector(".media");m.setAttribute("tabindex","0");m.setAttribute("role","button");m.setAttribute("aria-label","Enlarge photo: "+items[k].cap);
+      function open(){set=items;i=k;show();dlg.showModal();}
+      m.addEventListener("click",open);
+      m.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});});
+  });
+  document.getElementById("lb-prev").addEventListener("click",function(){step(-1);});
+  document.getElementById("lb-next").addEventListener("click",function(){step(1);});
+  document.getElementById("lb-close").addEventListener("click",function(){dlg.close();});
+  dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close();});
+  dlg.addEventListener("keydown",function(e){if(e.key==="ArrowLeft")step(-1);else if(e.key==="ArrowRight")step(1);});
+})();
 (function(){try{var e=atob("aGFuam9vLmNoYWVAZ21haWwuY29t");
 document.querySelectorAll("[data-email]").forEach(function(a){a.setAttribute("href","mailto:"+e);});
 document.querySelectorAll("[data-email-text]").forEach(function(el){el.textContent=e;});

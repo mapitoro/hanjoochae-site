@@ -116,11 +116,19 @@ const keywords = profile.keywords.map((k) => `<span class="chip">${esc(k)}</span
 
 // ---------- proof band ----------
 const wordmarks = (arr) => arr.map((x) => `<span class="wm">${esc(x)}</span>`).join("");
+// proof.groups: [{ label, items[] }] rendered in order; legacy proof.partners still supported.
+const proofGroups = proof.groups
+  ? proof.groups
+  : [{ label: "Partnered with", items: proof.partners || [] }];
+const proofRow = (label, items) =>
+  items && items.length
+    ? `<div class="proof-group"><span class="proof-k">${esc(label)}</span><div class="wm-list">${wordmarks(items)}</div></div>`
+    : "";
 const proofBand = `
   <div class="proof">
-    <div class="proof-group"><span class="proof-k">Partnered with</span><div class="wm-list">${wordmarks(proof.partners)}</div></div>
-    <div class="proof-group"><span class="proof-k">Spoke at</span><div class="wm-list">${wordmarks(proof.spokeAt)}</div></div>
-    <div class="proof-group"><span class="proof-k">Featured in</span><div class="wm-list">${wordmarks(proof.featuredIn)}</div></div>
+    ${proofGroups.map((g) => proofRow(g.label, g.items)).join("")}
+    ${proofRow("Spoke at", proof.spokeAt)}
+    ${proofRow("Featured in", proof.featuredIn)}
   </div>`;
 
 // ---------- education ----------
@@ -188,12 +196,30 @@ const rootsHtml = roots
   .join("");
 
 // ---------- experience ----------
+// An entry may carry `roles` (newest first) to show a title progression within one company.
+const bulletList = (arr) => (arr && arr.length ? `<ul>${arr.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>` : "");
 const expHtml = experience
-  .map((x) => `<div class="exp-item${x.current ? " current" : ""}">
+  .map((x) => {
+    if (x.roles && x.roles.length) {
+      const roles = x.roles
+        .map((r) => `<div class="exp-role${r.current ? " current" : ""}">
+          <div class="exp-role-head"><span class="exp-role-title">${esc(r.title)}</span><span class="exp-dates">${esc(dateRange(r.start, r.end))}</span></div>
+          ${bulletList(r.bullets)}
+        </div>`)
+        .join("");
+      return `<div class="exp-item exp-multi${x.current ? " current" : ""}">
+      <div class="exp-head"><h3>${esc(x.company)}</h3><span class="exp-dates">${esc(dateRange(x.start, x.end))}</span></div>
+      <div class="exp-org"><span>${esc(x.location)}</span></div>
+      ${bulletList(x.bullets)}
+      <div class="exp-roles">${roles}</div>
+    </div>`;
+    }
+    return `<div class="exp-item${x.current ? " current" : ""}">
       <div class="exp-head"><h3>${esc(x.role)}</h3><span class="exp-dates">${esc(dateRange(x.start, x.end))}</span></div>
       <div class="exp-org">${esc(x.company)} · <span>${esc(x.location)}</span></div>
-      <ul>${x.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>
-    </div>`)
+      ${bulletList(x.bullets)}
+    </div>`;
+  })
   .join("");
 
 // ---------- speaking ----------
@@ -321,7 +347,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);bac
 
 /* proof band */
 .proof{display:flex;flex-direction:column;gap:16px}
-.proof-group{display:grid;grid-template-columns:118px 1fr;align-items:start;gap:14px}
+.proof-group{display:grid;grid-template-columns:150px 1fr;align-items:start;gap:14px}
 .proof-k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:8px}
 .wm-list{display:flex;flex-wrap:wrap;gap:8px;min-width:0}
 .wm{font-family:"Newsreader",serif;font-size:16px;font-weight:600;color:var(--ink);background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:5px 12px}
@@ -355,6 +381,20 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);bac
 .fgallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-bottom:26px}
 .fgallery figure{margin:0}
 .fgallery figcaption{font-size:12.5px;color:var(--muted);margin-top:8px}
+/* gallery lightbox (click to enlarge) */
+.fgallery .media img{cursor:zoom-in;transition:transform .25s}
+.fgallery .media:hover img{transform:scale(1.02)}
+.fgallery .media:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(1200px,94vw);width:auto;overflow:visible}
+dialog.lb::backdrop{background:rgba(8,14,22,.86)}
+.lb-fig{margin:0;display:flex;flex-direction:column;align-items:center}
+.lb-fig img{display:block;max-width:min(1200px,94vw);max-height:80vh;width:auto;height:auto;border-radius:10px;background:#111}
+.lb-fig figcaption{color:#e6edf3;font-size:14px;margin-top:12px;text-align:center;max-width:760px;padding:0 12px}
+.lb-count{color:#9fb0c0;font-size:12px;margin-top:4px}
+.lb-btn{position:fixed;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;font-size:22px;line-height:1;cursor:pointer}
+.lb-btn:hover{background:rgba(255,255,255,.25)}
+.lb-prev{left:16px}.lb-next{right:16px}
+.lb-close{position:fixed;top:16px;right:16px;transform:none}
 .f-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
 .f-partners{display:flex;gap:8px;flex-wrap:wrap}
 .f-links{display:flex;gap:10px;flex-wrap:wrap}
@@ -392,6 +432,13 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);bac
 .exp-org span{color:var(--muted);font-weight:400}
 .exp-item ul{margin:8px 0 0;padding-left:18px}
 .exp-item li{color:var(--ink-2);margin-bottom:6px}
+.exp-roles{margin-top:10px}
+.exp-role{position:relative;padding:12px 0 4px 18px;border-left:2px solid var(--line);margin-left:2px}
+.exp-role::before{content:"";position:absolute;left:-5px;top:20px;width:8px;height:8px;border-radius:50%;background:#fff;border:2px solid var(--line)}
+.exp-role.current::before{background:var(--accent);border-color:var(--accent)}
+.exp-role-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.exp-role-title{font-weight:600;font-size:15.5px;color:var(--accent-deep)}
+.exp-role ul{margin-top:6px}
 
 /* speaking */
 .speak-media{max-width:760px;margin:0 0 8px}
@@ -585,8 +632,37 @@ footer{padding:36px 0;color:var(--muted);font-size:13px;text-align:center;border
 </section>
 
 <footer><div class="wrap">© <span id="yr"></span> ${esc(profile.name)} · ${esc(profile.location)}</div></footer>
+<dialog class="lb" id="lb" aria-label="Photo viewer">
+  <figure class="lb-fig"><img id="lb-img" alt="" /><figcaption id="lb-cap"></figcaption><div class="lb-count" id="lb-count"></div></figure>
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous photo">‹</button>
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Next photo">›</button>
+  <button class="lb-btn lb-close" id="lb-close" aria-label="Close">×</button>
+</dialog>
 <script>
 document.getElementById("yr").textContent=new Date().getFullYear();
+// gallery lightbox: click a gallery photo to view it uncropped; arrows / Esc / backdrop click
+(function(){
+  var dlg=document.getElementById("lb");
+  if(!dlg||typeof dlg.showModal!=="function")return;
+  var img=document.getElementById("lb-img"),cap=document.getElementById("lb-cap"),cnt=document.getElementById("lb-count");
+  var set=[],i=0;
+  function show(){var it=set[i];img.src=it.src;img.alt=it.alt;cap.textContent=it.cap;cnt.textContent=set.length>1?(i+1)+" / "+set.length:"";
+    document.getElementById("lb-prev").style.display=document.getElementById("lb-next").style.display=set.length>1?"":"none";}
+  function step(d){i=(i+d+set.length)%set.length;show();}
+  document.querySelectorAll(".fgallery").forEach(function(g){
+    var figs=[].slice.call(g.querySelectorAll("figure")).filter(function(f){return f.querySelector("img");});
+    var items=figs.map(function(f){var im=f.querySelector("img"),fc=f.querySelector("figcaption");return{src:im.currentSrc||im.src,alt:im.alt,cap:fc?fc.textContent:""};});
+    figs.forEach(function(f,k){var m=f.querySelector(".media");m.setAttribute("tabindex","0");m.setAttribute("role","button");m.setAttribute("aria-label","Enlarge photo: "+items[k].cap);
+      function open(){set=items;i=k;show();dlg.showModal();}
+      m.addEventListener("click",open);
+      m.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});});
+  });
+  document.getElementById("lb-prev").addEventListener("click",function(){step(-1);});
+  document.getElementById("lb-next").addEventListener("click",function(){step(1);});
+  document.getElementById("lb-close").addEventListener("click",function(){dlg.close();});
+  dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close();});
+  dlg.addEventListener("keydown",function(e){if(e.key==="ArrowLeft")step(-1);else if(e.key==="ArrowRight")step(1);});
+})();
 (function(){try{var e=atob("${emailB64}");
 document.querySelectorAll("[data-email]").forEach(function(a){a.setAttribute("href","mailto:"+e);});
 document.querySelectorAll("[data-email-text]").forEach(function(el){el.textContent=e;});
@@ -619,4 +695,5 @@ if (profile.cv) {
 }
 
 console.log("Built docs/index.html");
-console.log(`  ${publications.length} publications · ${patents.length} patents · ${experience.length} roles · ${ventures.length} ventures`);
+const roleCount = experience.reduce((s, x) => s + (x.roles ? x.roles.length : 1), 0);
+console.log(`  ${publications.length} publications · ${patents.length} patents · ${roleCount} roles (${experience.length} entries) · ${ventures.length} ventures`);

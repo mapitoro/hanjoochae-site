@@ -1,14 +1,14 @@
 {
   "name": "Han Joo Chae",
   "nameKo": "채한주",
-  "title": "CTO & Head of Global Business",
+  "title": "Chief Business and Technology Officer",
   "company": "Oncosoft",
-  "tagline": "Medical AI leader bridging R&D and global commercialization.",
-  "pov": "Medical AI only earns its place when it clears the regulators and reaches patients at global scale. I build the teams, products, and go-to-market that get it there.",
+  "tagline": "Medical AI executive taking regulated AI products to global markets.",
+  "pov": "Medical AI matters only when it clears regulatory review, earns clinicians' trust, and reaches patients worldwide. As a technologist turned business leader, I build the partnerships, channels, and teams that take it there.",
   "photo": "assets/img/profile.jpg",
   "speakingPhoto": "assets/img/speaking.jpg",
   "speakingVideo": "",
-  "summary": "Medical AI leader with deep expertise bridging R&D with global commercialization across startups and enterprises. I build and scale AI organizations from zero, lead cross-functional teams across Korea and the US, and take products from rapid prototyping to regulated global launch (FDA/CE) — securing $1B+ in contracts and expanding across the US, Asia, the Middle East, and Latin America through partnerships with Google Cloud and AWS.",
+  "summary": "Medical AI executive leading global business at Oncosoft, where I head the Global Business Division and drive expansion of AI radiation-oncology software across the US, Japan, Southeast Asia, and Latin America. I come from the technical side: I have built AI organizations from zero and taken products from prototype to regulated launch (FDA, CE, MFDS). At ROKIT Healthcare, I drove the commercial cycle from MVP to $1B+ in long-term contracts across the US, India, Turkey, the Middle East, and Latin America.",
   "location": "Seoul, Korea",
   "email": "hanjoo.chae@gmail.com",
   "analytics": { "goatcounter": "https://hanjoochae.goatcounter.com/count" },
@@ -19,19 +19,19 @@
   },
   "highlights": [
     { "value": "$1B+", "label": "Long-term contracts secured" },
-    { "value": "FDA / CE", "label": "Regulatory clearances achieved" },
-    { "value": "25%", "label": "Domestic market share (Oncosoft)" },
-    { "value": "15+", "label": "Granted US patents" }
+    { "value": "7 countries", "label": "Markets cleared or entered (Oncosoft)" },
+    { "value": "20+", "label": "Hospitals in Korea (Oncosoft)" },
+    { "value": "FDA / CE", "label": "Regulated launches led" }
   ],
   "keywords": [
+    "Global Business Development",
+    "Global Go-to-Market",
+    "Strategic Partnerships",
+    "Regulatory (FDA/CE/MFDS)",
     "Medical AI",
-    "Human-AI Interaction",
-    "Human-Computer Interaction",
+    "AI Agents in Radiation Oncology",
     "Computer Vision",
     "Machine Learning",
-    "Augmented / Mixed Reality",
-    "Global Go-to-Market",
-    "Regulatory (FDA/CE/MFDS)",
-    "MLOps"
+    "Human-Computer Interaction"
   ]
 }

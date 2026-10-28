@@ -22,7 +22,7 @@ Personal Website/
 ├─ docs/                    # ← PUBLISHED SITE (auto-generated; GitHub Pages serves this)
 │   ├─ index.html  CNAME  .nojekyll
 │   └─ assets/img/  (web-optimized images & video)
-├─ CLAUDE.md                # Claude's maintenance playbook (read every session)
+├─ CLAUDE.md                # Claude's maintenance playbook (local-only, gitignored)
 ├─ COWORK-PROJECT-INSTRUCTIONS.md    # paste-once text for the Cowork project field
 ├─ README.md                # this file
 ├─ .gitignore

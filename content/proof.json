@@ -1,8 +1,12 @@
 {
-  "partners": ["Google Cloud", "AWS"],
+  "groups": [
+    { "label": "Clinical & research", "items": ["Mayo Clinic", "UChicago Medicine", "Yonsei Cancer Center", "Samsung Medical Center"] },
+    { "label": "Commercial", "items": ["GenXRT (US)", "Anzai Medical (Japan)", "OPUS (Chile)", "AstraZeneca Korea"] }
+  ],
   "featuredIn": ["Google Cloud Customers", "Chosun Biz"],
   "spokeAt": [
     "AAPM Int'l Symposium",
+    "SOCHIRA (Chile)",
     "Google Cloud Startup Summit",
     "AWS Public Sector Summit",
     "Naver",

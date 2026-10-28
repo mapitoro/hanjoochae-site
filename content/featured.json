@@ -3,9 +3,9 @@
     "id": "oncosoft",
     "label": "Now · Current Role",
     "current": true,
-    "title": "Bringing AI to Radiation Oncology",
+    "title": "Taking AI Radiation Oncology Global",
     "org": "Oncosoft",
-    "role": "CTO & Head of Global Business",
+    "role": "Chief Business and Technology Officer",
     "years": "2024–present",
     "heroImage": "assets/img/oncosoft-pipeline.jpg",
     "heroFit": "contain",
@@ -13,42 +13,46 @@
     "video": "",
     "demoVideo": "assets/img/oncosoft-viewer.mp4",
     "demoCaption": "OncoStudio — AI auto-contouring of organs and tumors on CT/MR",
-    "lead": "As CTO and Head of Global Business, I lead the technology and global expansion of Oncosoft — an end-to-end AI software ecosystem bringing precision and efficiency to radiation oncology.",
+    "lead": "As Chief Business and Technology Officer, I lead Oncosoft's Global Business Division, taking an end-to-end AI platform for radiation oncology from regulatory clearance to clinical adoption across the US, Japan, Southeast Asia, and Latin America.",
     "blocks": [
       {
         "label": "Problem",
-        "text": "Radiation therapy planning depends on manual organ and tumor contouring on CT/MR — slow, variable between clinicians, and a bottleneck to treating more patients."
+        "text": "Radiation therapy planning still depends on manual contouring of organs and tumors: slow, variable between clinicians, and a bottleneck to treating more patients. For AI to fix that worldwide, it has to clear each market's regulators and reach clinics through channels they already trust."
       },
       {
         "label": "Approach",
-        "text": "OncoStudio auto-contours organs-at-risk and tumors in about a minute through a zero-click workflow integrated with PACS, TPS, and EMR. It anchors a full platform — OncoFlow, OncoStudio, OncoPlan, and OncoRPT — spanning imaging, planning, delivery, and follow-up."
+        "text": "OncoStudio auto-contours organs-at-risk and tumors, major organs in about a minute, inside existing PACS, TPS, and EMR workflows. It anchors a platform with OncoFlow (workflow), OncoPlan (particle-therapy planning), and OncoAgent, a guideline-aware AI agent published at MICCAI 2026. My division turns that platform into market access: country-by-country regulatory entry, distribution and industry partnerships, government R&D programs and IP, and clinical AI deployment engineers who support adoption on site."
       },
       {
         "label": "Impact",
-        "text": "Captured 25% domestic market share and ranked #1 in clinical performance benchmarks by leading Japanese research institutions, with 300,000+ patient cases processed. I lead R&D and global expansion across the US, Latin America, Southeast Asia, and the Middle East."
+        "text": "Cleared in six countries (Korea, US FDA 510(k), Japan, Singapore, Brazil, Indonesia), distributed in Chile through exclusive distributor OPUS, and used in 20+ hospitals in Korea. Mayo Clinic Florida is a customer under a 2025 solution supply agreement and a clinical validation partner; GenXRT is our first US commercial partner; Anzai Medical is the exclusive distributor in Japan. In particle therapy, OncoPlan was cleared by the MFDS in 2026 as the first carbon-ion treatment planning system developed by a Korean company, with Yonsei Cancer Center as technology transfer and joint R&D partner for carbon-ion planning and Samsung Medical Center as joint R&D partner for proton therapy validation."
       }
     ],
     "metrics": [
-      { "value": "25%", "label": "Domestic market share" },
-      { "value": "#1", "label": "Japan clinical benchmark" },
-      { "value": "300K+", "label": "Patient cases processed" },
-      { "value": "~1 min", "label": "Organ auto-contouring" }
+      { "value": "6 countries", "label": "Regulatory clearances" },
+      { "value": "20+", "label": "Hospitals in Korea" },
+      { "value": "1st", "label": "Korean-developed carbon-ion TPS" },
+      { "value": "~1 min", "label": "Major-organ auto-contouring" }
     ],
     "certifications": [
       { "region": "Korea (MFDS)", "date": "2022.02" },
       { "region": "US (FDA)", "date": "2025.02" },
       { "region": "Japan", "date": "2025.04" },
       { "region": "Singapore", "date": "2025.10" },
-      { "region": "Brazil", "date": "2025.12" }
+      { "region": "Brazil", "date": "2025.12" },
+      { "region": "OncoPlan · Korea (MFDS)", "date": "2026.08" },
+      { "region": "Indonesia", "date": "2026.10" }
     ],
     "gallery": [
+      { "image": "assets/img/aapm2026-demo.jpg", "caption": "Demonstrating OncoStudio to visiting clinicians at the Oncosoft booth, AAPM 2026" },
       { "image": "assets/img/oncosoft-booth.jpg", "caption": "Meeting clinicians and partners at a global oncology conference" },
       { "image": "assets/img/aapm-award.jpg", "caption": "Receiving the International Symposium Award — 5th KSMP-JSMP-KAMPiNA Joint Symposium at AAPM, 2025" },
       { "image": "assets/img/oncosoft-group.jpg", "caption": "With the Oncosoft team on-site" }
     ],
-    "partners": [],
+    "partners": ["Mayo Clinic Florida", "UChicago Medicine", "Yonsei Cancer Center", "Samsung Medical Center", "Gachon Gil Medical Center", "Proton Therapy Singapore", "GenXRT", "Anzai Medical", "OPUS (Chile)", "AstraZeneca Korea", "Paragon Care Korea", "Terapet"],
     "links": [
-      { "label": "Oncosoft", "url": "https://oncosoft.io" }
+      { "label": "Oncosoft", "url": "https://oncosoft.io" },
+      { "label": "Paper — MICCAI 2026", "url": "https://papers.miccai.org/miccai-2026/paper/5049_paper.pdf" }
     ]
   },
   {

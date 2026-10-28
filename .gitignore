@@ -18,8 +18,13 @@ archive/
 *.log
 .cache/
 
+# Claude's working playbook: contains internal business context (partner wording limits,
+# unannounced deals). The GitHub repo is PUBLIC, so keep it local only.
+CLAUDE.md
+CLAUDE.private.md
+
 # ── Tracked on purpose (do NOT ignore) ───────────────────────────────
 # knowledge/   — markdown reconciliation tables (publications/patents); committed and
 #                referenced by CLAUDE.md. All data is public (USPTO / published papers),
 #                no secrets, so it belongs in git.
-# content/, build/, docs/, *.md docs — committed (see CLAUDE.md "Repository layout").
+# content/, build/, docs/, README.md, COWORK-PROJECT-INSTRUCTIONS.md — committed (see CLAUDE.md "Repository layout").
